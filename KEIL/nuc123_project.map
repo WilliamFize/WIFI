@@ -1,0 +1,2156 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Small function inlining results
+
+Inlined total of 0 calls.
+
+==============================================================================
+
+Section Cross References
+
+    system_nuc123.o(i.CLK_GetPLLClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_nuc123.o(i.SystemCoreClockUpdate) refers to system_nuc123.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    system_nuc123.o(i.SystemCoreClockUpdate) refers to uidiv.o(.text) for __aeabi_uidivmod
+    system_nuc123.o(i.SystemCoreClockUpdate) refers to system_nuc123.o(.data) for PllClock
+    startup_nuc123.o(RESET) refers to startup_nuc123.o(STACK) for __initial_sp
+    startup_nuc123.o(RESET) refers to startup_nuc123.o(.text) for Reset_Handler
+    startup_nuc123.o(RESET) refers to retarget.o(.emb_text) for HardFault_Handler
+    startup_nuc123.o(RESET) refers to system_timer.o(i.TMR0_IRQHandler) for TMR0_IRQHandler
+    startup_nuc123.o(RESET) refers to wifi_core.o(i.UART1_IRQHandler) for UART1_IRQHandler
+    startup_nuc123.o(RESET) refers to hid_transfer.o(i.USBD_IRQHandler) for USBD_IRQHandler
+    startup_nuc123.o(RESET) refers to oled_dma.o(i.PDMA_IRQHandler) for PDMA_IRQHandler
+    startup_nuc123.o(RESET) refers to system_adc.o(i.ADC_IRQHandler) for ADC_IRQHandler
+    startup_nuc123.o(.text) refers to system_nuc123.o(i.SystemInit) for SystemInit
+    startup_nuc123.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    main.o(i.ClearMICFullstate) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    main.o(i.ClearMICFullstate) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    main.o(i.ClearMICFullstate) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    main.o(i.ClearMICFullstate) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    main.o(i.ClearMICFullstate) refers to main.o(.bss) for info
+    main.o(i.ClearMICFullstate) refers to audio_control.o(.bss) for mic
+    main.o(i.ClearMICFullstate) refers to display.o(.data) for popup
+    main.o(i.ClearMICFullstate) refers to display.o(.constdata) for image_mic_close
+    main.o(i.HostDisconnectDo) refers to audio_control.o(i.HardwordCloseMic) for HardwordCloseMic
+    main.o(i.HostDisconnectDo) refers to main.o(.bss) for info
+    main.o(i.HostDisconnectDo) refers to main.o(.data) for vote
+    main.o(i.HostDisconnectDo) refers to audio_control.o(.bss) for mic
+    main.o(i.HostDisconnectDo) refers to display.o(.data) for popup
+    main.o(i.LedFlashPolling) refers to main.o(.bss) for info
+    main.o(i.LedFlashPolling) refers to main.o(.data) for sign
+    main.o(i.LedStaticControl) refers to main.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    main.o(i.LedStaticControl) refers to main.o(.bss) for info
+    main.o(i.MicStatementPolling) refers to audio_control.o(i.HardwordCloseMic) for HardwordCloseMic
+    main.o(i.MicStatementPolling) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    main.o(i.MicStatementPolling) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    main.o(i.MicStatementPolling) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    main.o(i.MicStatementPolling) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    main.o(i.MicStatementPolling) refers to uidiv.o(.text) for __aeabi_uidivmod
+    main.o(i.MicStatementPolling) refers to oled_dma.o(i.OLEDDMAShowNumFill) for OLEDDMAShowNumFill
+    main.o(i.MicStatementPolling) refers to audio_control.o(.bss) for mic
+    main.o(i.MicStatementPolling) refers to main.o(.data) for apply_count
+    main.o(i.MicStatementPolling) refers to display.o(.data) for popup
+    main.o(i.MicStatementPolling) refers to main.o(.bss) for info
+    main.o(i.MicStatementPolling) refers to display.o(.constdata) for image_home
+    main.o(i.SystemClockInit) refers to clk.o(i.CLK_EnableXtalRC) for CLK_EnableXtalRC
+    main.o(i.SystemClockInit) refers to clk.o(i.CLK_WaitClockReady) for CLK_WaitClockReady
+    main.o(i.SystemClockInit) refers to clk.o(i.CLK_SetHCLK) for CLK_SetHCLK
+    main.o(i.SystemClockInit) refers to clk.o(i.CLK_SetCoreClock) for CLK_SetCoreClock
+    main.o(i.SystemClockInit) refers to clk.o(i.CLK_SetSysTickClockSrc) for CLK_SetSysTickClockSrc
+    main.o(i.SystemConnectPolling) refers to main.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    main.o(i.SystemConnectPolling) refers to main.o(i.HostDisconnectDo) for HostDisconnectDo
+    main.o(i.SystemConnectPolling) refers to display.o(i.DisplayHostLose) for DisplayHostLose
+    main.o(i.SystemConnectPolling) refers to wifi_core.o(i.HostCommandSendEnterSystem) for HostCommandSendEnterSystem
+    main.o(i.SystemConnectPolling) refers to display.o(i.DisplayUartError) for DisplayUartError
+    main.o(i.SystemConnectPolling) refers to display.o(i.DisplayAPLose) for DisplayAPLose
+    main.o(i.SystemConnectPolling) refers to display.o(i.DisplayStartupFlash) for DisplayStartupFlash
+    main.o(i.SystemConnectPolling) refers to main.o(.bss) for info
+    main.o(i.SystemGlobalInit) refers to dataflash.o(i.DataFlashInit) for DataFlashInit
+    main.o(i.SystemGlobalInit) refers to printf8.o(i.__0sprintf$8) for __2sprintf
+    main.o(i.SystemGlobalInit) refers to memseta.o(.text) for __aeabi_memset
+    main.o(i.SystemGlobalInit) refers to main.o(i.SystemGlobalSet) for SystemGlobalSet
+    main.o(i.SystemGlobalInit) refers to dataflash.o(i.DataFlashSave) for DataFlashSave
+    main.o(i.SystemGlobalInit) refers to strconv.o(i.U32_Change_U8_4) for U32_Change_U8_4
+    main.o(i.SystemGlobalInit) refers to memcpya.o(.text) for __aeabi_memcpy
+    main.o(i.SystemGlobalInit) refers to main.o(.bss) for system_save_data
+    main.o(i.SystemGlobalInit) refers to audio_control.o(.bss) for mic
+    main.o(i.SystemGlobalInit) refers to main.o(.data) for setid
+    main.o(i.SystemGlobalSet) refers to strconv.o(i.U8_4_Change_U32) for U8_4_Change_U32
+    main.o(i.SystemGlobalSet) refers to main.o(.bss) for system_save_data
+    main.o(i.SystemGlobalSet) refers to main.o(.data) for setid
+    main.o(i.SystemGlobalSet) refers to audio_control.o(.bss) for mic
+    main.o(i.SystemPowerDown) refers to main.o(i.SystemGlobalSet) for SystemGlobalSet
+    main.o(i.SystemPowerDown) refers to dataflash.o(i.DataFlashSave) for DataFlashSave
+    main.o(i.SystemPowerDown) refers to audio_control.o(i.HardwordCloseMic) for HardwordCloseMic
+    main.o(i.SystemPowerDown) refers to wifi_core.o(i.HostCommandSendEnterSystem) for HostCommandSendEnterSystem
+    main.o(i.SystemPowerDown) refers to delay.o(i.delay_ms) for delay_ms
+    main.o(i.SystemPowerDown) refers to oled_dma.o(i.OLEDCPUSendOff) for OLEDCPUSendOff
+    main.o(i.SystemPowerDown) refers to main.o(.bss) for system_save_data
+    main.o(i.Wm8974SpecialParmInit) refers to audio_control.o(i.SetMicSen2WM8974) for SetMicSen2WM8974
+    main.o(i.Wm8974SpecialParmInit) refers to wm8974.o(i.Wm8974SetFilter) for Wm8974SetFilter
+    main.o(i.Wm8974SpecialParmInit) refers to wm8974.o(i.Wm8974SetEQValue) for Wm8974SetEQValue
+    main.o(i.Wm8974SpecialParmInit) refers to audio_control.o(.bss) for mic
+    main.o(i.main) refers to main.o(i.SystemClockInit) for SystemClockInit
+    main.o(i.main) refers to main.o(i.GpioNormalInit) for GpioNormalInit
+    main.o(i.main) refers to main.o(i.SystemGlobalInit) for SystemGlobalInit
+    main.o(i.main) refers to oled_dma.o(i.OLEDSpiInit) for OLEDSpiInit
+    main.o(i.main) refers to system_timer.o(i.SystemTimer0Init) for SystemTimer0Init
+    main.o(i.main) refers to hid_transfer.o(i.HID_Init) for HID_Init
+    main.o(i.main) refers to wifi_core.o(i.WifiCoreUSARTInit) for WifiCoreUSARTInit
+    main.o(i.main) refers to wm8974.o(i.Wm8974RegisterInit) for Wm8974RegisterInit
+    main.o(i.main) refers to main.o(i.Wm8974SpecialParmInit) for Wm8974SpecialParmInit
+    main.o(i.main) refers to system_adc.o(i.SystemAdcInit) for SystemAdcInit
+    main.o(i.main) refers to wifi_core.o(i.WifiCoreRecvPolling) for WifiCoreRecvPolling
+    main.o(i.main) refers to hid_transfer.o(i.UsbRecvPolling) for UsbRecvPolling
+    main.o(i.main) refers to key.o(i.KeyInputPolling) for KeyInputPolling
+    main.o(i.main) refers to system_adc.o(i.SystemReadAdcPolling) for SystemReadAdcPolling
+    main.o(i.main) refers to main.o(i.SystemConnectPolling) for SystemConnectPolling
+    main.o(i.main) refers to main.o(i.LedFlashPolling) for LedFlashPolling
+    main.o(i.main) refers to main.o(i.MicStatementPolling) for MicStatementPolling
+    main.o(i.main) refers to display.o(i.DisplayPopupTimeoutPolling) for DisplayPopupTimeoutPolling
+    main.o(i.main) refers to main.o(i.ClearMICFullstate) for ClearMICFullstate
+    main.o(i.main) refers to oled_dma.o(i.OLEDNegation) for OLEDNegation
+    main.o(i.main) refers to oled_dma.o(i.OLEDDMAPolling) for OLEDDMAPolling
+    main.o(i.main) refers to system_timer.o(.data) for timer0_delay_1ms_count
+    delay.o(i.delay_ms) refers to delay.o(i.SysTimerDelay) for SysTimerDelay
+    delay.o(i.delay_us) refers to delay.o(i.SysTimerDelay) for SysTimerDelay
+    i2c_simulate.o(i.IICDataDownload) refers to i2c_simulate.o(i.IIC_BUS_Write_More_Byte) for IIC_BUS_Write_More_Byte
+    i2c_simulate.o(i.IIC_Ack) refers to delay.o(i.delay_us) for delay_us
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte) refers to i2c_simulate.o(i.IIC_Start) for IIC_Start
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte) refers to i2c_simulate.o(i.IIC_Send_Byte) for IIC_Send_Byte
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte) refers to i2c_simulate.o(i.IIC_Wait_Ack) for IIC_Wait_Ack
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte) refers to i2c_simulate.o(i.IIC_Read_Byte) for IIC_Read_Byte
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Start) for IIC_Start
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Send_Byte) for IIC_Send_Byte
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Wait_Ack) for IIC_Wait_Ack
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Read_Byte) for IIC_Read_Byte
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    i2c_simulate.o(i.IIC_BUS_Read_More_Byte_2_Byte_Rigister_Address) refers to delay.o(i.delay_ms) for delay_ms
+    i2c_simulate.o(i.IIC_BUS_Read_One_Byte) refers to i2c_simulate.o(i.IIC_Start) for IIC_Start
+    i2c_simulate.o(i.IIC_BUS_Read_One_Byte) refers to i2c_simulate.o(i.IIC_Send_Byte) for IIC_Send_Byte
+    i2c_simulate.o(i.IIC_BUS_Read_One_Byte) refers to i2c_simulate.o(i.IIC_Wait_Ack) for IIC_Wait_Ack
+    i2c_simulate.o(i.IIC_BUS_Read_One_Byte) refers to i2c_simulate.o(i.IIC_Read_Byte) for IIC_Read_Byte
+    i2c_simulate.o(i.IIC_BUS_Read_One_Byte) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    i2c_simulate.o(i.IIC_BUS_Write_4_Byte) refers to i2c_simulate.o(i.IIC_Start) for IIC_Start
+    i2c_simulate.o(i.IIC_BUS_Write_4_Byte) refers to i2c_simulate.o(i.IIC_Send_Byte) for IIC_Send_Byte
+    i2c_simulate.o(i.IIC_BUS_Write_4_Byte) refers to i2c_simulate.o(i.IIC_Wait_Ack) for IIC_Wait_Ack
+    i2c_simulate.o(i.IIC_BUS_Write_4_Byte) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    i2c_simulate.o(i.IIC_BUS_Write_4_Byte) refers to delay.o(i.delay_ms) for delay_ms
+    i2c_simulate.o(i.IIC_BUS_Write_4_Byte) refers to i2c_simulate.o(.data) for send_data
+    i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) refers to i2c_simulate.o(i.IIC_Start) for IIC_Start
+    i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) refers to i2c_simulate.o(i.IIC_Send_Byte) for IIC_Send_Byte
+    i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) refers to i2c_simulate.o(i.IIC_Wait_Ack) for IIC_Wait_Ack
+    i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) refers to delay.o(i.delay_ms) for delay_ms
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte) refers to i2c_simulate.o(i.IIC_Start) for IIC_Start
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte) refers to i2c_simulate.o(i.IIC_Send_Byte) for IIC_Send_Byte
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte) refers to i2c_simulate.o(i.IIC_Wait_Ack) for IIC_Wait_Ack
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte) refers to delay.o(i.delay_ms) for delay_ms
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Start) for IIC_Start
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Send_Byte) for IIC_Send_Byte
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Wait_Ack) for IIC_Wait_Ack
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte_2_Byte_Rigister_Address) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    i2c_simulate.o(i.IIC_BUS_Write_More_Byte_2_Byte_Rigister_Address) refers to delay.o(i.delay_ms) for delay_ms
+    i2c_simulate.o(i.IIC_BUS_Write_One_Byte) refers to i2c_simulate.o(i.IIC_Start) for IIC_Start
+    i2c_simulate.o(i.IIC_BUS_Write_One_Byte) refers to i2c_simulate.o(i.IIC_Send_Byte) for IIC_Send_Byte
+    i2c_simulate.o(i.IIC_BUS_Write_One_Byte) refers to i2c_simulate.o(i.IIC_Wait_Ack) for IIC_Wait_Ack
+    i2c_simulate.o(i.IIC_BUS_Write_One_Byte) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    i2c_simulate.o(i.IIC_BUS_Write_One_Byte) refers to delay.o(i.delay_ms) for delay_ms
+    i2c_simulate.o(i.IIC_NAck) refers to delay.o(i.delay_us) for delay_us
+    i2c_simulate.o(i.IIC_Read_Byte) refers to delay.o(i.delay_us) for delay_us
+    i2c_simulate.o(i.IIC_Read_Byte) refers to i2c_simulate.o(i.IIC_NAck) for IIC_NAck
+    i2c_simulate.o(i.IIC_Read_Byte) refers to i2c_simulate.o(i.IIC_Ack) for IIC_Ack
+    i2c_simulate.o(i.IIC_Send_Byte) refers to delay.o(i.delay_us) for delay_us
+    i2c_simulate.o(i.IIC_Start) refers to delay.o(i.delay_us) for delay_us
+    i2c_simulate.o(i.IIC_Stop) refers to delay.o(i.delay_us) for delay_us
+    i2c_simulate.o(i.IIC_Wait_Ack) refers to delay.o(i.delay_us) for delay_us
+    i2c_simulate.o(i.IIC_Wait_Ack) refers to i2c_simulate.o(i.IIC_Stop) for IIC_Stop
+    wm8974.o(i.Wm8974RegisterInit) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974RegisterInit) refers to wm8974.o(i.Wm8974SetSpkVolCtrl) for Wm8974SetSpkVolCtrl
+    wm8974.o(i.Wm8974RegisterInit) refers to wm8974.o(i.Wm8974SetMonoVolCtrl) for Wm8974SetMonoVolCtrl
+    wm8974.o(i.Wm8974RegisterInit) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetAdcDbVolume) refers to fmul.o(.text) for __aeabi_fmul
+    wm8974.o(i.Wm8974SetAdcDbVolume) refers to fadd.o(.text) for __aeabi_fadd
+    wm8974.o(i.Wm8974SetAdcDbVolume) refers to ffixui.o(.text) for __aeabi_f2uiz
+    wm8974.o(i.Wm8974SetAdcDbVolume) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetAdcDbVolume) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetDacDbVolume) refers to fmul.o(.text) for __aeabi_fmul
+    wm8974.o(i.Wm8974SetDacDbVolume) refers to fadd.o(.text) for __aeabi_fadd
+    wm8974.o(i.Wm8974SetDacDbVolume) refers to ffixui.o(.text) for __aeabi_f2uiz
+    wm8974.o(i.Wm8974SetDacDbVolume) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetDacDbVolume) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetDacHexVolume) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetDacHexVolume) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetEQValue) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetEQValue) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetFilter) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetFilter) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetInpgaDbVolume) refers to fadd.o(.text) for __aeabi_fadd
+    wm8974.o(i.Wm8974SetInpgaDbVolume) refers to f2d.o(.text) for __aeabi_f2d
+    wm8974.o(i.Wm8974SetInpgaDbVolume) refers to ddiv.o(.text) for __aeabi_ddiv
+    wm8974.o(i.Wm8974SetInpgaDbVolume) refers to dfixui.o(.text) for __aeabi_d2uiz
+    wm8974.o(i.Wm8974SetInpgaDbVolume) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetInpgaDbVolume) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetInpgaHexVolume) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetInpgaHexVolume) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetMonoVolCtrl) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetMonoVolCtrl) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(i.Wm8974SetSpkVolCtrl) refers to i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata) for IIC_BUS_Write_7Bitadd_9Bitdata
+    wm8974.o(i.Wm8974SetSpkVolCtrl) refers to wm8974.o(.data) for WM8974_OPT_STRUCT
+    wm8974.o(.data) refers to wm8974.o(i.WM8974_SCK) for WM8974_SCK
+    wm8974.o(.data) refers to wm8974.o(i.WM8974_SDO) for WM8974_SDO
+    wm8974.o(.data) refers to wm8974.o(i.WM8974_SDI) for WM8974_SDI
+    wm8974.o(.data) refers to wm8974.o(i.WM8974_SDA_Mode) for WM8974_SDA_Mode
+    dataflash.o(i.DataFlashFindDataNumber_NS) refers to dataflash.o(i.FMC_Read) for FMC_Read
+    dataflash.o(i.DataFlashFindDataNumber_NS) refers to dataflash.o(i.DataFlashClean_NS) for DataFlashClean_NS
+    dataflash.o(i.DataFlashFindDataNumber_NS) refers to dataflash.o(.data) for DataFlashWriteNumber
+    dataflash.o(i.DataFlashInit) refers to dataflash.o(i.SYS_UnlockReg) for SYS_UnlockReg
+    dataflash.o(i.DataFlashInit) refers to dataflash.o(i.DataFlashFindDataNumber_NS) for DataFlashFindDataNumber_NS
+    dataflash.o(i.DataFlashInit) refers to dataflash.o(i.DataFlashRead_NS) for DataFlashRead_NS
+    dataflash.o(i.DataFlashInit) refers to dataflash.o(i.FMC_ReadUID) for FMC_ReadUID
+    dataflash.o(i.DataFlashInit) refers to strconv.o(i.U32_Change_U8_4) for U32_Change_U8_4
+    dataflash.o(i.DataFlashInit) refers to main.o(.bss) for info
+    dataflash.o(i.DataFlashRead_NS) refers to dataflash.o(i.FMC_Read) for FMC_Read
+    dataflash.o(i.DataFlashRead_NS) refers to dataflash.o(.data) for DataFlashReadNumber
+    dataflash.o(i.DataFlashSave) refers to dataflash.o(i.SYS_UnlockReg) for SYS_UnlockReg
+    dataflash.o(i.DataFlashSave) refers to dataflash.o(i.DataFlashClean_NS) for DataFlashClean_NS
+    dataflash.o(i.DataFlashSave) refers to dataflash.o(.data) for DataFlashWriteNumber
+    system_adc.o(i.ADC_IRQHandler) refers to system_adc.o(.bss) for meet_unit_adc
+    system_adc.o(i.AdcNopRuning) refers to system_adc.o(.bss) for meet_unit_adc
+    system_adc.o(i.Battery_conver) refers to system_adc.o(.constdata) for battery_rank_list
+    system_adc.o(i.SystemAdcInit) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    system_adc.o(i.SystemAdcInit) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    system_adc.o(i.SystemAdcInit) refers to system_adc.o(i.AdcNopRuning) for AdcNopRuning
+    system_adc.o(i.SystemReadAdcPolling) refers to system_adc.o(i.AdcBubbleSort) for AdcBubbleSort
+    system_adc.o(i.SystemReadAdcPolling) refers to system_adc.o(i.Battery_conver) for Battery_conver
+    system_adc.o(i.SystemReadAdcPolling) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    system_adc.o(i.SystemReadAdcPolling) refers to wifi_core.o(i.HostCommandSend) for HostCommandSend
+    system_adc.o(i.SystemReadAdcPolling) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    system_adc.o(i.SystemReadAdcPolling) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    system_adc.o(i.SystemReadAdcPolling) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    system_adc.o(i.SystemReadAdcPolling) refers to oled_dma.o(i.OLEDDMAUpdateImmediately) for OLEDDMAUpdateImmediately
+    system_adc.o(i.SystemReadAdcPolling) refers to delay.o(i.delay_ms) for delay_ms
+    system_adc.o(i.SystemReadAdcPolling) refers to main.o(i.SystemPowerDown) for SystemPowerDown
+    system_adc.o(i.SystemReadAdcPolling) refers to system_adc.o(i.VoiceModeNoSignalResetTimer) for VoiceModeNoSignalResetTimer
+    system_adc.o(i.SystemReadAdcPolling) refers to audio_control.o(i.HardwordCloseMic) for HardwordCloseMic
+    system_adc.o(i.SystemReadAdcPolling) refers to wm8974.o(i.Wm8974RegisterInit) for Wm8974RegisterInit
+    system_adc.o(i.SystemReadAdcPolling) refers to main.o(i.Wm8974SpecialParmInit) for Wm8974SpecialParmInit
+    system_adc.o(i.SystemReadAdcPolling) refers to system_adc.o(.bss) for meet_unit_adc
+    system_adc.o(i.SystemReadAdcPolling) refers to main.o(.bss) for info
+    system_adc.o(i.SystemReadAdcPolling) refers to display.o(.constdata) for image_bat_value
+    system_adc.o(i.SystemReadAdcPolling) refers to system_adc.o(.data) for mic_recheck_count
+    system_adc.o(i.SystemReadAdcPolling) refers to audio_control.o(.bss) for mic
+    system_adc.o(i.SystemReadAdcPolling) refers to display.o(.data) for popup
+    system_adc.o(i.VoiceModeNoSignalResetTimer) refers to audio_control.o(.bss) for mic
+    system_timer.o(i.SystemTimer0Init) refers to system_timer.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    system_timer.o(i.TMR0_IRQHandler) refers to system_timer.o(.data) for timer0_delay_10ms_count
+    strconv.o(i.GetComipleDate_to_ver) refers to _scanf_int.o(.text) for _scanf_int
+    strconv.o(i.GetComipleDate_to_ver) refers to _scanf_str.o(.text) for _scanf_string
+    strconv.o(i.GetComipleDate_to_ver) refers to memcpya.o(.text) for __aeabi_memcpy4
+    strconv.o(i.GetComipleDate_to_ver) refers to printf8.o(i.__0sprintf$8) for __2sprintf
+    strconv.o(i.GetComipleDate_to_ver) refers to __0sscanf.o(.text) for __0sscanf
+    strconv.o(i.GetComipleDate_to_ver) refers to strconv.o(i.strcmp_fixName) for strcmp_fixName
+    strconv.o(i.GetComipleDate_to_ver) refers to idiv.o(.text) for __aeabi_idivmod
+    strconv.o(i.GetComipleDate_to_ver) refers to strconv.o(.constdata) for .constdata
+    audio_control.o(i.HardwordCloseMic) refers to wifi_core.o(i.HostCommandSend) for HostCommandSend
+    audio_control.o(i.HardwordCloseMic) refers to wifi_core.o(i.WifiCoreCommandSend) for WifiCoreCommandSend
+    audio_control.o(i.HardwordCloseMic) refers to main.o(i.LedStaticControl) for LedStaticControl
+    audio_control.o(i.HardwordCloseMic) refers to audio_control.o(.bss) for mic
+    audio_control.o(i.HardwordOpenMic) refers to system_adc.o(i.VoiceModeNoSignalResetTimer) for VoiceModeNoSignalResetTimer
+    audio_control.o(i.HardwordOpenMic) refers to wifi_core.o(i.WifiCoreCommandSend) for WifiCoreCommandSend
+    audio_control.o(i.HardwordOpenMic) refers to main.o(i.LedStaticControl) for LedStaticControl
+    audio_control.o(i.HardwordOpenMic) refers to audio_control.o(.bss) for mic
+    audio_control.o(i.MicOpenFadePolling) refers to wm8974.o(i.Wm8974SetInpgaHexVolume) for Wm8974SetInpgaHexVolume
+    audio_control.o(i.MicOpenFadePolling) refers to audio_control.o(.bss) for mic
+    audio_control.o(i.MicOpenFadePolling) refers to audio_control.o(.data) for mic_fade_tmr
+    audio_control.o(i.SetMicSen2WM8974) refers to wm8974.o(i.Wm8974SetInpgaHexVolume) for Wm8974SetInpgaHexVolume
+    key.o(i.KeyInputPolling) refers to key.o(i.keyInputGet) for keyInputGet
+    key.o(i.KeyInputPolling) refers to main.o(i.SystemPowerDown) for SystemPowerDown
+    key.o(i.KeyInputPolling) refers to wifi_core.o(i.HostCommandSend) for HostCommandSend
+    key.o(i.KeyInputPolling) refers to oled_dma.o(i.OLEDDMAShowNumFill) for OLEDDMAShowNumFill
+    key.o(i.KeyInputPolling) refers to main.o(i.LedStaticControl) for LedStaticControl
+    key.o(i.KeyInputPolling) refers to audio_control.o(i.HardwordCloseMic) for HardwordCloseMic
+    key.o(i.KeyInputPolling) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    key.o(i.KeyInputPolling) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    key.o(i.KeyInputPolling) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    key.o(i.KeyInputPolling) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    key.o(i.KeyInputPolling) refers to display.o(i.DisplaySystemInfo) for DisplaySystemInfo
+    key.o(i.KeyInputPolling) refers to display.o(i.DisplayRestoreMeetingMode) for DisplayRestoreMeetingMode
+    key.o(i.KeyInputPolling) refers to key.o(.data) for key_press
+    key.o(i.KeyInputPolling) refers to main.o(.bss) for info
+    key.o(i.KeyInputPolling) refers to main.o(.data) for setid
+    key.o(i.KeyInputPolling) refers to audio_control.o(.bss) for mic
+    key.o(i.KeyInputPolling) refers to display.o(.data) for popup
+    key.o(i.KeyInputPolling) refers to display.o(.constdata) for image_mic_close
+    key.o(i.WaitUsbAesUidKeyInputPolling) refers to key.o(i.keyInputGet) for keyInputGet
+    key.o(i.WaitUsbAesUidKeyInputPolling) refers to main.o(i.SystemPowerDown) for SystemPowerDown
+    key.o(i.WaitUsbAesUidKeyInputPolling) refers to key.o(.data) for key_press
+    key.o(i.keyInputGet) refers to main.o(.bss) for info
+    key.o(i.keyInputGet) refers to key.o(.data) for key_info
+    descriptors.o(.constdata) refers to descriptors.o(.data) for gpu8UsbString
+    descriptors.o(.data) refers to descriptors.o(.constdata) for gu8StringLang
+    hid_transfer.o(i.EP3_Handler) refers to hid_transfer.o(i.USBD_MemCopy) for USBD_MemCopy
+    hid_transfer.o(i.EP3_Handler) refers to hid_transfer.o(.bss) for usb_recv
+    hid_transfer.o(i.HID_ClassRequest) refers to usbd.o(i.USBD_GetSetupPacket) for USBD_GetSetupPacket
+    hid_transfer.o(i.HID_ClassRequest) refers to hid_transfer.o(i.USBD_SetStall) for USBD_SetStall
+    hid_transfer.o(i.HID_Init) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    hid_transfer.o(i.HID_Init) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    hid_transfer.o(i.HID_Init) refers to usbd.o(i.USBD_Open) for USBD_Open
+    hid_transfer.o(i.HID_Init) refers to usbd.o(i.USBD_Start) for USBD_Start
+    hid_transfer.o(i.HID_Init) refers to hid_transfer.o(i.HID_ClassRequest) for HID_ClassRequest
+    hid_transfer.o(i.HID_Init) refers to descriptors.o(.constdata) for gsInfo
+    hid_transfer.o(i.USBD_IRQHandler) refers to usbd.o(i.USBD_SwReset) for USBD_SwReset
+    hid_transfer.o(i.USBD_IRQHandler) refers to usbd.o(i.USBD_ProcessSetupPacket) for USBD_ProcessSetupPacket
+    hid_transfer.o(i.USBD_IRQHandler) refers to usbd.o(i.USBD_CtrlIn) for USBD_CtrlIn
+    hid_transfer.o(i.USBD_IRQHandler) refers to usbd.o(i.USBD_CtrlOut) for USBD_CtrlOut
+    hid_transfer.o(i.USBD_IRQHandler) refers to hid_transfer.o(i.EP3_Handler) for EP3_Handler
+    hid_transfer.o(i.UsbRecvPolling) refers to hid_transfer.o(i.UsbStringCompare) for UsbStringCompare
+    hid_transfer.o(i.UsbRecvPolling) refers to memcpya.o(.text) for __aeabi_memcpy
+    hid_transfer.o(i.UsbRecvPolling) refers to hid_transfer.o(i.USBD_MemCopy) for USBD_MemCopy
+    hid_transfer.o(i.UsbRecvPolling) refers to oled_dma.o(i.OLEDDMAClearPic) for OLEDDMAClearPic
+    hid_transfer.o(i.UsbRecvPolling) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    hid_transfer.o(i.UsbRecvPolling) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    hid_transfer.o(i.UsbRecvPolling) refers to oled_dma.o(i.OLEDDMAUpdateImmediately) for OLEDDMAUpdateImmediately
+    hid_transfer.o(i.UsbRecvPolling) refers to wifi_core.o(i.WifiCoreCommandSend) for WifiCoreCommandSend
+    hid_transfer.o(i.UsbRecvPolling) refers to delay.o(i.delay_ms) for delay_ms
+    hid_transfer.o(i.UsbRecvPolling) refers to main.o(i.SystemPowerDown) for SystemPowerDown
+    hid_transfer.o(i.UsbRecvPolling) refers to hid_transfer.o(.bss) for usb_recv
+    hid_transfer.o(i.UsbRecvPolling) refers to main.o(.bss) for wifi
+    hid_transfer.o(i.UsbRecvPolling) refers to hid_transfer.o(.constdata) for sucess_string
+    hid_transfer.o(i.UsbRecvPolling) refers to display.o(.constdata) for image_ssid_set_ok
+    hid_transfer.o(i.UsbRecvUidAes) refers to memseta.o(.text) for __aeabi_memclr4
+    hid_transfer.o(i.UsbRecvUidAes) refers to memcpya.o(.text) for __aeabi_memcpy
+    hid_transfer.o(i.UsbRecvUidAes) refers to aes.o(i.ScheduleKey) for ScheduleKey
+    hid_transfer.o(i.UsbRecvUidAes) refers to aes.o(i.AesEncrypt) for AesEncrypt
+    hid_transfer.o(i.UsbRecvUidAes) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    hid_transfer.o(i.UsbRecvUidAes) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    hid_transfer.o(i.UsbRecvUidAes) refers to oled_dma.o(i.OLEDDMAUpdateImmediately) for OLEDDMAUpdateImmediately
+    hid_transfer.o(i.UsbRecvUidAes) refers to hid_transfer.o(i.USBD_MemCopy) for USBD_MemCopy
+    hid_transfer.o(i.UsbRecvUidAes) refers to delay.o(i.delay_ms) for delay_ms
+    hid_transfer.o(i.UsbRecvUidAes) refers to main.o(i.SystemPowerDown) for SystemPowerDown
+    hid_transfer.o(i.UsbRecvUidAes) refers to key.o(i.WaitUsbAesUidKeyInputPolling) for WaitUsbAesUidKeyInputPolling
+    hid_transfer.o(i.UsbRecvUidAes) refers to hid_transfer.o(.constdata) for .constdata
+    hid_transfer.o(i.UsbRecvUidAes) refers to main.o(.bss) for info
+    hid_transfer.o(i.UsbRecvUidAes) refers to display.o(.constdata) for image_please_crack
+    hid_transfer.o(i.UsbRecvUidAes) refers to hid_transfer.o(.bss) for usb_recv
+    hid_transfer.o(i.UsbRecvUidAes) refers to system_timer.o(.data) for timer0_delay_1ms_count
+    hid_transfer.o(i.UsbStringCompare) refers to memcpya.o(.text) for __aeabi_memcpy
+    aes.o(i.AesEncrypt) refers to aes.o(i.AddRoundKey) for AddRoundKey
+    aes.o(i.AesEncrypt) refers to aes.o(i.SubBytes) for SubBytes
+    aes.o(i.AesEncrypt) refers to aes.o(i.ShiftRows) for ShiftRows
+    aes.o(i.AesEncrypt) refers to aes.o(i.MixColumns) for MixColumns
+    aes.o(i.Contrary_AesEncrypt) refers to aes.o(i.AddRoundKey) for AddRoundKey
+    aes.o(i.Contrary_AesEncrypt) refers to aes.o(i.Contrary_ShiftRows) for Contrary_ShiftRows
+    aes.o(i.Contrary_AesEncrypt) refers to aes.o(i.Contrary_SubBytes) for Contrary_SubBytes
+    aes.o(i.Contrary_AesEncrypt) refers to aes.o(i.Contrary_MixColumns) for Contrary_MixColumns
+    aes.o(i.Contrary_MixColumns) refers to aes.o(i.xtime) for xtime
+    aes.o(i.Contrary_SubBytes) refers to aes.o(.constdata) for contrary_sbox
+    aes.o(i.MixColumns) refers to aes.o(i.xtime) for xtime
+    aes.o(i.ScheduleKey) refers to idiv.o(.text) for __aeabi_idivmod
+    aes.o(i.ScheduleKey) refers to aes.o(.constdata) for sbox
+    aes.o(i.SubBytes) refers to aes.o(.constdata) for sbox
+    wifi_core.o(i.HostCommandSend) refers to wifi_core.o(i.WifiCoreWriteByte) for WifiCoreWriteByte
+    wifi_core.o(i.HostCommandSend) refers to delay.o(i.delay_ms) for delay_ms
+    wifi_core.o(i.HostCommandSendEnterSystem) refers to wifi_core.o(i.WifiCoreCommandSend) for WifiCoreCommandSend
+    wifi_core.o(i.HostCommandSendEnterSystem) refers to main.o(.bss) for info
+    wifi_core.o(i.HostRecvCheck) refers to main.o(i.HostDisconnectDo) for HostDisconnectDo
+    wifi_core.o(i.HostRecvCheck) refers to main.o(i.SystemPowerDown) for SystemPowerDown
+    wifi_core.o(i.HostRecvCheck) refers to display.o(i.DisplayStatusInfo) for DisplayStatusInfo
+    wifi_core.o(i.HostRecvCheck) refers to display.o(i.DisplayRestoreMeetingMode) for DisplayRestoreMeetingMode
+    wifi_core.o(i.HostRecvCheck) refers to display.o(i.DisplayRestoreSignMode) for DisplayRestoreSignMode
+    wifi_core.o(i.HostRecvCheck) refers to display.o(i.DisplayRestoreVoteMode) for DisplayRestoreVoteMode
+    wifi_core.o(i.HostRecvCheck) refers to display.o(i.DisplayRestoreSetIDMode) for DisplayRestoreSetIDMode
+    wifi_core.o(i.HostRecvCheck) refers to audio_control.o(i.HardwordCloseMic) for HardwordCloseMic
+    wifi_core.o(i.HostRecvCheck) refers to display.o(i.DisplayRestoreIDRepeatMode) for DisplayRestoreIDRepeatMode
+    wifi_core.o(i.HostRecvCheck) refers to audio_control.o(i.HardwordOpenMic) for HardwordOpenMic
+    wifi_core.o(i.HostRecvCheck) refers to display.o(i.DisplayMicStartTimeStatement) for DisplayMicStartTimeStatement
+    wifi_core.o(i.HostRecvCheck) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    wifi_core.o(i.HostRecvCheck) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    wifi_core.o(i.HostRecvCheck) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    wifi_core.o(i.HostRecvCheck) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    wifi_core.o(i.HostRecvCheck) refers to main.o(i.LedStaticControl) for LedStaticControl
+    wifi_core.o(i.HostRecvCheck) refers to main.o(.bss) for info
+    wifi_core.o(i.HostRecvCheck) refers to audio_control.o(.bss) for mic
+    wifi_core.o(i.HostRecvCheck) refers to main.o(.data) for sign
+    wifi_core.o(i.HostRecvCheck) refers to display.o(.data) for popup
+    wifi_core.o(i.HostRecvCheck) refers to display.o(.constdata) for image_mic_open
+    wifi_core.o(i.HostRecvCheck) refers to wifi_core.o(i.HostCommandSend) for HostCommandSend
+    wifi_core.o(i.HostRecvCheck) refers to oled_dma.o(i.OLEDDMAShowNumFill) for OLEDDMAShowNumFill
+    wifi_core.o(i.HostRecvCheck) refers to main.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    wifi_core.o(i.HostRecvCheck) refers to wifi_core.o(i.WifiCoreCommandSend) for WifiCoreCommandSend
+    wifi_core.o(i.HostRecvCheck) refers to system_adc.o(i.VoiceModeNoSignalResetTimer) for VoiceModeNoSignalResetTimer
+    wifi_core.o(i.HostRecvCheck) refers to wm8974.o(i.Wm8974SetFilter) for Wm8974SetFilter
+    wifi_core.o(i.HostRecvCheck) refers to audio_control.o(i.SetMicSen2WM8974) for SetMicSen2WM8974
+    wifi_core.o(i.HostRecvCheck) refers to wm8974.o(i.Wm8974SetEQValue) for Wm8974SetEQValue
+    wifi_core.o(i.HostRecvCheck) refers to memcpya.o(.text) for __aeabi_memcpy
+    wifi_core.o(i.HostRecvCheck) refers to memseta.o(.text) for __aeabi_memset
+    wifi_core.o(i.HostRecvCheck) refers to idiv.o(.text) for __aeabi_idivmod
+    wifi_core.o(i.UART1_IRQHandler) refers to wifi_core.o(.bss) for wifi_core_recv
+    wifi_core.o(i.WifiCoreCommandSend) refers to wifi_core.o(i.WifiCoreWriteByte) for WifiCoreWriteByte
+    wifi_core.o(i.WifiCoreCommandSend) refers to delay.o(i.delay_ms) for delay_ms
+    wifi_core.o(i.WifiCoreRecvPolling) refers to wifi_core.o(i.HostCommandSendEnterSystem) for HostCommandSendEnterSystem
+    wifi_core.o(i.WifiCoreRecvPolling) refers to memcpya.o(.text) for __aeabi_memcpy
+    wifi_core.o(i.WifiCoreRecvPolling) refers to main.o(i.HostDisconnectDo) for HostDisconnectDo
+    wifi_core.o(i.WifiCoreRecvPolling) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    wifi_core.o(i.WifiCoreRecvPolling) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    wifi_core.o(i.WifiCoreRecvPolling) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    wifi_core.o(i.WifiCoreRecvPolling) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    wifi_core.o(i.WifiCoreRecvPolling) refers to wifi_core.o(i.HostCommandSend) for HostCommandSend
+    wifi_core.o(i.WifiCoreRecvPolling) refers to display.o(i.DisplayAPLose) for DisplayAPLose
+    wifi_core.o(i.WifiCoreRecvPolling) refers to wifi_core.o(i.WifiCoreCommandSend) for WifiCoreCommandSend
+    wifi_core.o(i.WifiCoreRecvPolling) refers to wifi_core.o(i.HostRecvCheck) for HostRecvCheck
+    wifi_core.o(i.WifiCoreRecvPolling) refers to wifi_core.o(.bss) for wifi_core_recv
+    wifi_core.o(i.WifiCoreRecvPolling) refers to main.o(.bss) for wifi
+    wifi_core.o(i.WifiCoreRecvPolling) refers to wifi_core.o(.constdata) for rssi_conv_list
+    wifi_core.o(i.WifiCoreRecvPolling) refers to display.o(.constdata) for image_rssi_too_low
+    wifi_core.o(i.WifiCoreRecvPolling) refers to main.o(.data) for setid
+    wifi_core.o(i.WifiCoreUSARTInit) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    wifi_core.o(i.WifiCoreUSARTInit) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    wifi_core.o(i.WifiCoreUSARTInit) refers to sys.o(i.SYS_ResetModule) for SYS_ResetModule
+    wifi_core.o(i.WifiCoreUSARTInit) refers to uart.o(i.UART_Open) for UART_Open
+    wifi_core.o(i.WifiCoreUSARTInit) refers to wifi_core.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    wifi_core.o(i.WifiCoreUSARTInit) refers to uart.o(i.UART_EnableInt) for UART_EnableInt
+    wifi_core.o(i.WifiCoreUSARTInit) refers to wifi_core.o(.bss) for wifi_core_recv
+    oled_dma.o(i.OLEDCPUClear) refers to oled_dma.o(i.OLEDCPUSetCol) for OLEDCPUSetCol
+    oled_dma.o(i.OLEDCPUClear) refers to oled_dma.o(i.OLEDCPUSetPage) for OLEDCPUSetPage
+    oled_dma.o(i.OLEDCPUClear) refers to oled_dma.o(i.OLEDCPUSendDat) for OLEDCPUSendDat
+    oled_dma.o(i.OLEDCPUSendOff) refers to oled_dma.o(i.OLEDCPUSendCmd) for OLEDCPUSendCmd
+    oled_dma.o(i.OLEDCPUSendOn) refers to oled_dma.o(i.OLEDCPUSendCmd) for OLEDCPUSendCmd
+    oled_dma.o(i.OLEDCPUSetCol) refers to oled_dma.o(i.OLEDCPUSendCmd) for OLEDCPUSendCmd
+    oled_dma.o(i.OLEDCPUSetPage) refers to oled_dma.o(i.OLEDCPUSendCmd) for OLEDCPUSendCmd
+    oled_dma.o(i.OLEDDMAClearPic) refers to memseta.o(.text) for __aeabi_memclr4
+    oled_dma.o(i.OLEDDMAClearPic) refers to oled_dma.o(i.OLEDDMAUpdate) for OLEDDMAUpdate
+    oled_dma.o(i.OLEDDMAClearPic) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDDMAFill) refers to oled_dma.o(i.OLEDDMAUpdate) for OLEDDMAUpdate
+    oled_dma.o(i.OLEDDMAFill) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDDMAPolling) refers to pdma.o(i.PDMA_Trigger) for PDMA_Trigger
+    oled_dma.o(i.OLEDDMAPolling) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDDMASetAllWhite) refers to memseta.o(.text) for __aeabi_memset
+    oled_dma.o(i.OLEDDMASetAllWhite) refers to oled_dma.o(i.OLEDDMAUpdate) for OLEDDMAUpdate
+    oled_dma.o(i.OLEDDMASetAllWhite) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDDMAShowChar) refers to oled_dma.o(i.OLEDDMAUpdate) for OLEDDMAUpdate
+    oled_dma.o(i.OLEDDMAShowChar) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDDMAShowChar) refers to oled_dma.o(.constdata) for OLED_Ascii_8_16
+    oled_dma.o(i.OLEDDMAShowNum) refers to printf8.o(i.__0sprintf$8) for __2sprintf
+    oled_dma.o(i.OLEDDMAShowNum) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    oled_dma.o(i.OLEDDMAShowNumFill) refers to strconv.o(i.M_Pow_N) for M_Pow_N
+    oled_dma.o(i.OLEDDMAShowNumFill) refers to uidiv.o(.text) for __aeabi_uidivmod
+    oled_dma.o(i.OLEDDMAShowNumFill) refers to oled_dma.o(i.OLEDDMAShowChar) for OLEDDMAShowChar
+    oled_dma.o(i.OLEDDMAShowPic) refers to oled_dma.o(i.OLEDDMAUpdate) for OLEDDMAUpdate
+    oled_dma.o(i.OLEDDMAShowPic) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDDMAShowStr) refers to oled_dma.o(i.OLEDDMAShowChar) for OLEDDMAShowChar
+    oled_dma.o(i.OLEDDMAUpdate) refers to oled_dma.o(i.OLEDNegation) for OLEDNegation
+    oled_dma.o(i.OLEDDMAUpdate) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDDMAUpdate) refers to system_timer.o(.data) for timer0_1s_flag
+    oled_dma.o(i.OLEDDMAUpdateImmediately) refers to pdma.o(i.PDMA_Trigger) for PDMA_Trigger
+    oled_dma.o(i.OLEDDMAUpdateImmediately) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDNegation) refers to system_timer.o(.data) for timer0_1s_flag
+    oled_dma.o(i.OLEDNegation) refers to oled_dma.o(.bss) for oled
+    oled_dma.o(i.OLEDRegInit) refers to oled_dma.o(i.OLEDCPUSendCmd) for OLEDCPUSendCmd
+    oled_dma.o(i.OLEDRegInit) refers to oled_dma.o(i.OLEDCPUClear) for OLEDCPUClear
+    oled_dma.o(i.OLEDSpiInit) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    oled_dma.o(i.OLEDSpiInit) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    oled_dma.o(i.OLEDSpiInit) refers to sys.o(i.SYS_ResetModule) for SYS_ResetModule
+    oled_dma.o(i.OLEDSpiInit) refers to spi.o(i.SPI_Open) for SPI_Open
+    oled_dma.o(i.OLEDSpiInit) refers to spi.o(i.SPI_EnableAutoSS) for SPI_EnableAutoSS
+    oled_dma.o(i.OLEDSpiInit) refers to delay.o(i.delay_ms) for delay_ms
+    oled_dma.o(i.OLEDSpiInit) refers to oled_dma.o(i.OLEDRegInit) for OLEDRegInit
+    oled_dma.o(i.OLEDSpiInit) refers to pdma.o(i.PDMA_Open) for PDMA_Open
+    oled_dma.o(i.OLEDSpiInit) refers to pdma.o(i.PDMA_SetTransferCnt) for PDMA_SetTransferCnt
+    oled_dma.o(i.OLEDSpiInit) refers to pdma.o(i.PDMA_SetTransferAddr) for PDMA_SetTransferAddr
+    oled_dma.o(i.OLEDSpiInit) refers to pdma.o(i.PDMA_SetTransferMode) for PDMA_SetTransferMode
+    oled_dma.o(i.OLEDSpiInit) refers to pdma.o(i.PDMA_EnableInt) for PDMA_EnableInt
+    oled_dma.o(i.OLEDSpiInit) refers to oled_dma.o(.bss) for oled
+    display.o(i.DisplayAPLose) refers to display.o(i.DisplayStatusInfo) for DisplayStatusInfo
+    display.o(i.DisplayAPLose) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayAPLose) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayAPLose) refers to printf8.o(i.__0sprintf$8) for __2sprintf
+    display.o(i.DisplayAPLose) refers to main.o(.bss) for info
+    display.o(i.DisplayAPLose) refers to display.o(.constdata) for image_ap_lose
+    display.o(i.DisplayHostLose) refers to display.o(i.DisplayStatusInfo) for DisplayStatusInfo
+    display.o(i.DisplayHostLose) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayHostLose) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayHostLose) refers to printf8.o(i.__0sprintf$8) for __2sprintf
+    display.o(i.DisplayHostLose) refers to main.o(.bss) for info
+    display.o(i.DisplayHostLose) refers to display.o(.constdata) for image_host_lose
+    display.o(i.DisplayMicStartTimeStatement) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplayMicStartTimeStatement) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    display.o(i.DisplayMicStartTimeStatement) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayMicStartTimeStatement) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayMicStartTimeStatement) refers to uidiv.o(.text) for __aeabi_uidivmod
+    display.o(i.DisplayMicStartTimeStatement) refers to oled_dma.o(i.OLEDDMAShowNumFill) for OLEDDMAShowNumFill
+    display.o(i.DisplayMicStartTimeStatement) refers to audio_control.o(.bss) for mic
+    display.o(i.DisplayMicStartTimeStatement) refers to main.o(.bss) for info
+    display.o(i.DisplayMicStartTimeStatement) refers to display.o(.data) for popup
+    display.o(i.DisplayMicStartTimeStatement) refers to display.o(.constdata) for image_spk_time
+    display.o(i.DisplayMicStartTimeStatement) refers to system_timer.o(.data) for timer0_delay_1s_already
+    display.o(i.DisplayPopupTimeoutPolling) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplayPopupTimeoutPolling) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    display.o(i.DisplayPopupTimeoutPolling) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayPopupTimeoutPolling) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayPopupTimeoutPolling) refers to display.o(i.DisplayRestoreMeetingMode) for DisplayRestoreMeetingMode
+    display.o(i.DisplayPopupTimeoutPolling) refers to display.o(.data) for popup
+    display.o(i.DisplayPopupTimeoutPolling) refers to main.o(.bss) for info
+    display.o(i.DisplayPopupTimeoutPolling) refers to display.o(.constdata) for image_home
+    display.o(i.DisplayRestoreIDRepeatMode) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplayRestoreIDRepeatMode) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    display.o(i.DisplayRestoreIDRepeatMode) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayRestoreIDRepeatMode) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayRestoreIDRepeatMode) refers to main.o(i.LedStaticControl) for LedStaticControl
+    display.o(i.DisplayRestoreIDRepeatMode) refers to audio_control.o(.bss) for mic
+    display.o(i.DisplayRestoreIDRepeatMode) refers to display.o(.data) for popup
+    display.o(i.DisplayRestoreIDRepeatMode) refers to main.o(.bss) for info
+    display.o(i.DisplayRestoreIDRepeatMode) refers to display.o(.constdata) for image_id_repeat
+    display.o(i.DisplayRestoreMeetingMode) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplayRestoreMeetingMode) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    display.o(i.DisplayRestoreMeetingMode) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayRestoreMeetingMode) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayRestoreMeetingMode) refers to uidiv.o(.text) for __aeabi_uidivmod
+    display.o(i.DisplayRestoreMeetingMode) refers to oled_dma.o(i.OLEDDMAShowNumFill) for OLEDDMAShowNumFill
+    display.o(i.DisplayRestoreMeetingMode) refers to main.o(i.LedStaticControl) for LedStaticControl
+    display.o(i.DisplayRestoreMeetingMode) refers to audio_control.o(.bss) for mic
+    display.o(i.DisplayRestoreMeetingMode) refers to display.o(.data) for popup
+    display.o(i.DisplayRestoreMeetingMode) refers to main.o(.bss) for info
+    display.o(i.DisplayRestoreMeetingMode) refers to display.o(.constdata) for image_spk_time
+    display.o(i.DisplayRestoreSetIDMode) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplayRestoreSetIDMode) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    display.o(i.DisplayRestoreSetIDMode) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayRestoreSetIDMode) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayRestoreSetIDMode) refers to oled_dma.o(i.OLEDDMAShowNumFill) for OLEDDMAShowNumFill
+    display.o(i.DisplayRestoreSetIDMode) refers to main.o(i.LedStaticControl) for LedStaticControl
+    display.o(i.DisplayRestoreSetIDMode) refers to audio_control.o(.bss) for mic
+    display.o(i.DisplayRestoreSetIDMode) refers to display.o(.data) for popup
+    display.o(i.DisplayRestoreSetIDMode) refers to main.o(.bss) for info
+    display.o(i.DisplayRestoreSetIDMode) refers to display.o(.constdata) for image_local_id
+    display.o(i.DisplayRestoreSetIDMode) refers to main.o(.data) for setid
+    display.o(i.DisplayRestoreSignMode) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplayRestoreSignMode) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    display.o(i.DisplayRestoreSignMode) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayRestoreSignMode) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayRestoreSignMode) refers to oled_dma.o(i.OLEDDMAShowNumFill) for OLEDDMAShowNumFill
+    display.o(i.DisplayRestoreSignMode) refers to main.o(i.LedStaticControl) for LedStaticControl
+    display.o(i.DisplayRestoreSignMode) refers to display.o(.data) for popup
+    display.o(i.DisplayRestoreSignMode) refers to audio_control.o(.bss) for mic
+    display.o(i.DisplayRestoreSignMode) refers to main.o(.bss) for info
+    display.o(i.DisplayRestoreSignMode) refers to main.o(.data) for sign
+    display.o(i.DisplayRestoreSignMode) refers to display.o(.constdata) for image_total_sign
+    display.o(i.DisplayRestoreVoteMode) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplayRestoreVoteMode) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    display.o(i.DisplayRestoreVoteMode) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayRestoreVoteMode) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayRestoreVoteMode) refers to main.o(i.LedStaticControl) for LedStaticControl
+    display.o(i.DisplayRestoreVoteMode) refers to audio_control.o(.bss) for mic
+    display.o(i.DisplayRestoreVoteMode) refers to display.o(.data) for popup
+    display.o(i.DisplayRestoreVoteMode) refers to main.o(.bss) for info
+    display.o(i.DisplayRestoreVoteMode) refers to display.o(.constdata) for image_voting
+    display.o(i.DisplaySetPopup) refers to display.o(.data) for popup
+    display.o(i.DisplayStartupFlash) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayStartupFlash) refers to idiv.o(.text) for __aeabi_idivmod
+    display.o(i.DisplayStartupFlash) refers to display.o(.data) for time
+    display.o(i.DisplayStartupFlash) refers to display.o(.constdata) for image_startup
+    display.o(i.DisplayStatusInfo) refers to oled_dma.o(i.OLEDDMAClearPic) for OLEDDMAClearPic
+    display.o(i.DisplayStatusInfo) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplayStatusInfo) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayStatusInfo) refers to printf8.o(i.__0sprintf$8) for __2sprintf
+    display.o(i.DisplayStatusInfo) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayStatusInfo) refers to main.o(.bss) for info
+    display.o(i.DisplayStatusInfo) refers to display.o(.constdata) for image_bat_charge
+    display.o(i.DisplayStatusInfo) refers to main.o(.data) for setid
+    display.o(i.DisplaySystemInfo) refers to display.o(i.DisplaySetPopup) for DisplaySetPopup
+    display.o(i.DisplaySystemInfo) refers to oled_dma.o(i.OLEDDMAFill) for OLEDDMAFill
+    display.o(i.DisplaySystemInfo) refers to printf8.o(i.__0sprintf$8) for __2sprintf
+    display.o(i.DisplaySystemInfo) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplaySystemInfo) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplaySystemInfo) refers to main.o(.bss) for wifi
+    display.o(i.DisplaySystemInfo) refers to display.o(.constdata) for image_ver
+    display.o(i.DisplayUartError) refers to display.o(i.DisplayStatusInfo) for DisplayStatusInfo
+    display.o(i.DisplayUartError) refers to oled_dma.o(i.OLEDDMAShowStr) for OLEDDMAShowStr
+    display.o(i.DisplayUartError) refers to oled_dma.o(i.OLEDDMAShowPic) for OLEDDMAShowPic
+    display.o(i.DisplayUartError) refers to main.o(.bss) for info
+    display.o(i.DisplayUartError) refers to display.o(.constdata) for image_core_uart_error
+    clk.o(i.CLK_DisableCKO) refers to clk.o(i.CLK_DisableModuleClock) for CLK_DisableModuleClock
+    clk.o(i.CLK_EnableCKO) refers to clk.o(i.CLK_EnableModuleClock) for CLK_EnableModuleClock
+    clk.o(i.CLK_EnableCKO) refers to clk.o(i.CLK_SetModuleClock) for CLK_SetModuleClock
+    clk.o(i.CLK_EnablePLL) refers to clk.o(i.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(i.CLK_EnablePLL) refers to uidiv.o(.text) for __aeabi_uidivmod
+    clk.o(i.CLK_EnablePLL) refers to clk.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    clk.o(i.CLK_GetCPUFreq) refers to system_nuc123.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(i.CLK_GetCPUFreq) refers to system_nuc123.o(.data) for SystemCoreClock
+    clk.o(i.CLK_GetHCLKFreq) refers to system_nuc123.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(i.CLK_GetHCLKFreq) refers to system_nuc123.o(.data) for SystemCoreClock
+    clk.o(i.CLK_GetPCLKFreq) refers to system_nuc123.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(i.CLK_GetPCLKFreq) refers to system_nuc123.o(.data) for SystemCoreClock
+    clk.o(i.CLK_GetPLLClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    clk.o(i.CLK_SetCoreClock) refers to clk.o(i.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(i.CLK_SetCoreClock) refers to clk.o(i.CLK_EnablePLL) for CLK_EnablePLL
+    clk.o(i.CLK_SetCoreClock) refers to clk.o(i.CLK_SetHCLK) for CLK_SetHCLK
+    clk.o(i.CLK_SetHCLK) refers to clk.o(i.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(i.CLK_SetHCLK) refers to system_nuc123.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(i.CLK_SetModuleClock) refers to clk.o(.constdata) for .constdata
+    retarget.o(.emb_text) refers to retarget.o(i.Hard_Fault_Handler) for Hard_Fault_Handler
+    retarget.o(i.Hard_Fault_Handler) refers to printf8.o(i.__0printf$8) for __2printf
+    retarget.o(i.Hard_Fault_Handler) refers to retarget.o(i.stackDump) for stackDump
+    retarget.o(i.SendChar) refers to retarget.o(i.SendChar_ToUART) for SendChar_ToUART
+    retarget.o(i._ttywrch) refers to retarget.o(i.SendChar) for SendChar
+    retarget.o(i.fgetc) refers to retarget.o(i.GetChar) for GetChar
+    retarget.o(i.fputc) refers to retarget.o(i.SendChar) for SendChar
+    retarget.o(i.stackDump) refers to printf8.o(i.__0printf$8) for __2printf
+    uart.o(i.CLK_GetPLLClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.UART_DisableInt) refers to uart.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    uart.o(i.UART_EnableInt) refers to uart.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    uart.o(i.UART_Open) refers to uart.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(i.UART_Open) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.UART_Open) refers to uart.o(.constdata) for .constdata
+    uart.o(i.UART_SelectIrDAMode) refers to uart.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(i.UART_SelectIrDAMode) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.UART_SelectIrDAMode) refers to uart.o(.constdata) for .constdata
+    uart.o(i.UART_SetLine_Config) refers to uart.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    uart.o(i.UART_SetLine_Config) refers to uidiv.o(.text) for __aeabi_uidivmod
+    uart.o(i.UART_SetLine_Config) refers to uart.o(.constdata) for .constdata
+    usbd.o(i.USBD_CtrlIn) refers to usbd.o(i.USBD_MemCopy) for USBD_MemCopy
+    usbd.o(i.USBD_CtrlIn) refers to usbd.o(.data) for g_usbd_CtrlInSize
+    usbd.o(i.USBD_CtrlOut) refers to usbd.o(i.USBD_MemCopy) for USBD_MemCopy
+    usbd.o(i.USBD_CtrlOut) refers to usbd.o(.data) for g_usbd_CtrlOutSize
+    usbd.o(i.USBD_GetDescriptor) refers to usbd.o(i.USBD_PrepareCtrlIn) for USBD_PrepareCtrlIn
+    usbd.o(i.USBD_GetDescriptor) refers to usbd.o(i.USBD_PrepareCtrlOut) for USBD_PrepareCtrlOut
+    usbd.o(i.USBD_GetDescriptor) refers to usbd.o(.data) for g_usbd_SetupPacket
+    usbd.o(i.USBD_GetSetupPacket) refers to usbd.o(i.USBD_MemCopy) for USBD_MemCopy
+    usbd.o(i.USBD_GetSetupPacket) refers to usbd.o(.data) for g_usbd_SetupPacket
+    usbd.o(i.USBD_LockEpStall) refers to usbd.o(.data) for g_u32EpStallLock
+    usbd.o(i.USBD_Open) refers to usbd.o(.data) for g_usbd_sInfo
+    usbd.o(i.USBD_PrepareCtrlIn) refers to usbd.o(i.USBD_MemCopy) for USBD_MemCopy
+    usbd.o(i.USBD_PrepareCtrlIn) refers to usbd.o(.data) for g_usbd_CtrlMaxPktSize
+    usbd.o(i.USBD_PrepareCtrlOut) refers to usbd.o(.data) for g_usbd_CtrlOutPointer
+    usbd.o(i.USBD_ProcessSetupPacket) refers to usbd.o(i.USBD_MemCopy) for USBD_MemCopy
+    usbd.o(i.USBD_ProcessSetupPacket) refers to usbd.o(i.USBD_StandardRequest) for USBD_StandardRequest
+    usbd.o(i.USBD_ProcessSetupPacket) refers to usbd.o(.data) for g_usbd_SetupPacket
+    usbd.o(i.USBD_SetConfigCallback) refers to usbd.o(.data) for g_usbd_pfnSetConfigCallback
+    usbd.o(i.USBD_SetVendorRequest) refers to usbd.o(.data) for g_usbd_pfnVendorRequest
+    usbd.o(i.USBD_StandardRequest) refers to usbd.o(i.USBD_PrepareCtrlOut) for USBD_PrepareCtrlOut
+    usbd.o(i.USBD_StandardRequest) refers to usbd.o(i.USBD_GetDescriptor) for USBD_GetDescriptor
+    usbd.o(i.USBD_StandardRequest) refers to usbd.o(.data) for g_usbd_CtrlInPointer
+    usbd.o(i.USBD_Start) refers to system_nuc123.o(.data) for CyclesPerUs
+    usbd.o(i.USBD_SwReset) refers to usbd.o(.data) for g_usbd_CtrlInPointer
+    spi.o(i.CLK_GetPLLClockFreq) refers to uidiv.o(.text) for __aeabi_uidivmod
+    spi.o(i.SPI_GetBusClock) refers to clk.o(i.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    spi.o(i.SPI_GetBusClock) refers to spi.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    spi.o(i.SPI_GetBusClock) refers to uidiv.o(.text) for __aeabi_uidivmod
+    spi.o(i.SPI_Open) refers to clk.o(i.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    spi.o(i.SPI_Open) refers to spi.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    spi.o(i.SPI_Open) refers to uidiv.o(.text) for __aeabi_uidivmod
+    spi.o(i.SPI_SetBusClock) refers to clk.o(i.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
+    spi.o(i.SPI_SetBusClock) refers to spi.o(i.CLK_GetPLLClockFreq) for CLK_GetPLLClockFreq
+    spi.o(i.SPI_SetBusClock) refers to uidiv.o(.text) for __aeabi_uidivmod
+    pdma.o(i.PDMA_SetTransferMode) refers to main.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    idiv.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to retarget.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to retarget.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to retarget.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to retarget.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to retarget.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to retarget.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to retarget.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to retarget.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to retarget.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to retarget.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to retarget.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to retarget.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to retarget.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to retarget.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to retarget.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to retarget.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to retarget.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to retarget.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to retarget.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to retarget.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to retarget.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to retarget.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    __0sscanf.o(.text) refers to scanf_char.o(.text) for __vfscanf_char
+    __0sscanf.o(.text) refers to _sgetc.o(.text) for _sgetc
+    _scanf_int.o(.text) refers to _chval.o(.text) for _chval
+    fadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fadd.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    fmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    ffixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixui.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_nuc123.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_nuc123.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    scanf_char.o(.text) refers to _scanf.o(.text) for __vfscanf
+    scanf_char.o(.text) refers to isspace_c.o(.text) for isspace
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    isspace_c.o(.text) refers to ctype_c.o(.text) for __ctype_lookup
+    _scanf.o(.text) refers (Weak) to _scanf_int.o(.text) for _scanf_int
+    _scanf.o(.text) refers (Weak) to _scanf_str.o(.text) for _scanf_string
+    ctype_c.o(.text) refers to ctype_c.o(.constdata) for .constdata
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_nuc123.o(.rev16_text), (4 bytes).
+    Removing system_nuc123.o(.revsh_text), (4 bytes).
+    Removing startup_nuc123.o(HEAP), (0 bytes).
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing delay.o(.rev16_text), (4 bytes).
+    Removing delay.o(.revsh_text), (4 bytes).
+    Removing i2c_simulate.o(.rev16_text), (4 bytes).
+    Removing i2c_simulate.o(.revsh_text), (4 bytes).
+    Removing i2c_simulate.o(i.IICDataDownload), (52 bytes).
+    Removing i2c_simulate.o(i.IIC_Ack), (48 bytes).
+    Removing i2c_simulate.o(i.IIC_BUS_Read_More_Byte), (106 bytes).
+    Removing i2c_simulate.o(i.IIC_BUS_Read_More_Byte_2_Byte_Rigister_Address), (144 bytes).
+    Removing i2c_simulate.o(i.IIC_BUS_Read_One_Byte), (86 bytes).
+    Removing i2c_simulate.o(i.IIC_BUS_Write_4_Byte), (104 bytes).
+    Removing i2c_simulate.o(i.IIC_BUS_Write_More_Byte), (86 bytes).
+    Removing i2c_simulate.o(i.IIC_BUS_Write_More_Byte_2_Byte_Rigister_Address), (110 bytes).
+    Removing i2c_simulate.o(i.IIC_BUS_Write_One_Byte), (70 bytes).
+    Removing i2c_simulate.o(i.IIC_NAck), (48 bytes).
+    Removing i2c_simulate.o(i.IIC_Read_Byte), (88 bytes).
+    Removing i2c_simulate.o(.data), (1 bytes).
+    Removing wm8974.o(.rev16_text), (4 bytes).
+    Removing wm8974.o(.revsh_text), (4 bytes).
+    Removing wm8974.o(i.Wm8974SetAdcDbVolume), (52 bytes).
+    Removing wm8974.o(i.Wm8974SetDacDbVolume), (52 bytes).
+    Removing wm8974.o(i.Wm8974SetDacHexVolume), (20 bytes).
+    Removing wm8974.o(i.Wm8974SetInpgaDbVolume), (64 bytes).
+    Removing dataflash.o(.rev16_text), (4 bytes).
+    Removing dataflash.o(.revsh_text), (4 bytes).
+    Removing system_adc.o(.rev16_text), (4 bytes).
+    Removing system_adc.o(.revsh_text), (4 bytes).
+    Removing system_timer.o(.rev16_text), (4 bytes).
+    Removing system_timer.o(.revsh_text), (4 bytes).
+    Removing strconv.o(.rev16_text), (4 bytes).
+    Removing strconv.o(.revsh_text), (4 bytes).
+    Removing strconv.o(i.GetComipleDate_to_ver), (220 bytes).
+    Removing strconv.o(i.StringIp2ByteHex), (68 bytes).
+    Removing strconv.o(i.StringMac2ByteHex), (100 bytes).
+    Removing strconv.o(i.strcmp_fixName), (40 bytes).
+    Removing strconv.o(.constdata), (48 bytes).
+    Removing audio_control.o(.rev16_text), (4 bytes).
+    Removing audio_control.o(.revsh_text), (4 bytes).
+    Removing audio_control.o(i.MicOpenFadePolling), (80 bytes).
+    Removing audio_control.o(.data), (2 bytes).
+    Removing key.o(.rev16_text), (4 bytes).
+    Removing key.o(.revsh_text), (4 bytes).
+    Removing key.o(i.WaitUsbAesUidKeyInputPolling), (56 bytes).
+    Removing descriptors.o(.rev16_text), (4 bytes).
+    Removing descriptors.o(.revsh_text), (4 bytes).
+    Removing hid_transfer.o(.rev16_text), (4 bytes).
+    Removing hid_transfer.o(.revsh_text), (4 bytes).
+    Removing hid_transfer.o(i.UsbRecvUidAes), (484 bytes).
+    Removing aes.o(i.AddRoundKey), (28 bytes).
+    Removing aes.o(i.AesEncrypt), (82 bytes).
+    Removing aes.o(i.Contrary_AesEncrypt), (80 bytes).
+    Removing aes.o(i.Contrary_MixColumns), (400 bytes).
+    Removing aes.o(i.Contrary_ShiftRows), (50 bytes).
+    Removing aes.o(i.Contrary_SubBytes), (28 bytes).
+    Removing aes.o(i.MixColumns), (176 bytes).
+    Removing aes.o(i.ScheduleKey), (232 bytes).
+    Removing aes.o(i.ShiftRows), (50 bytes).
+    Removing aes.o(i.SubBytes), (28 bytes).
+    Removing aes.o(i.xtime), (26 bytes).
+    Removing aes.o(.constdata), (522 bytes).
+    Removing wifi_core.o(.rev16_text), (4 bytes).
+    Removing wifi_core.o(.revsh_text), (4 bytes).
+    Removing oled_dma.o(.rev16_text), (4 bytes).
+    Removing oled_dma.o(.revsh_text), (4 bytes).
+    Removing oled_dma.o(i.OLEDCPUSendOn), (10 bytes).
+    Removing oled_dma.o(i.OLEDDMASetAllWhite), (48 bytes).
+    Removing oled_dma.o(i.OLEDDMAShowNum), (44 bytes).
+    Removing display.o(.rev16_text), (4 bytes).
+    Removing display.o(.revsh_text), (4 bytes).
+    Removing clk.o(.rev16_text), (4 bytes).
+    Removing clk.o(.revsh_text), (4 bytes).
+    Removing clk.o(i.CLK_DisableCKO), (16 bytes).
+    Removing clk.o(i.CLK_DisableModuleClock), (36 bytes).
+    Removing clk.o(i.CLK_DisablePLL), (20 bytes).
+    Removing clk.o(i.CLK_DisableSysTick), (12 bytes).
+    Removing clk.o(i.CLK_DisableXtalRC), (16 bytes).
+    Removing clk.o(i.CLK_EnableCKO), (44 bytes).
+    Removing clk.o(i.CLK_EnableSysTick), (72 bytes).
+    Removing clk.o(i.CLK_GetCPUFreq), (16 bytes).
+    Removing clk.o(i.CLK_GetHXTFreq), (28 bytes).
+    Removing clk.o(i.CLK_GetPCLKFreq), (40 bytes).
+    Removing clk.o(i.CLK_Idle), (36 bytes).
+    Removing clk.o(i.CLK_PowerDown), (40 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(i.GPIO_DisableInt), (28 bytes).
+    Removing gpio.o(i.GPIO_EnableInt), (26 bytes).
+    Removing gpio.o(i.GPIO_SetMode), (46 bytes).
+    Removing retarget.o(.rev16_text), (4 bytes).
+    Removing retarget.o(.revsh_text), (4 bytes).
+    Removing retarget.o(i.GetChar), (32 bytes).
+    Removing retarget.o(i.IsDebugFifoEmpty), (20 bytes).
+    Removing retarget.o(i._ttywrch), (12 bytes).
+    Removing retarget.o(i.ferror), (8 bytes).
+    Removing retarget.o(i.fgetc), (10 bytes).
+    Removing retarget.o(i.kbhit), (20 bytes).
+    Removing sys.o(.rev16_text), (4 bytes).
+    Removing sys.o(.revsh_text), (4 bytes).
+    Removing sys.o(i.SYS_ClearResetSrc), (16 bytes).
+    Removing sys.o(i.SYS_DisableBOD), (18 bytes).
+    Removing sys.o(i.SYS_EnableBOD), (50 bytes).
+    Removing sys.o(i.SYS_GetBODStatus), (14 bytes).
+    Removing sys.o(i.SYS_GetResetSrc), (8 bytes).
+    Removing sys.o(i.SYS_IsRegLocked), (20 bytes).
+    Removing sys.o(i.SYS_ReadPDID), (8 bytes).
+    Removing sys.o(i.SYS_ResetCPU), (18 bytes).
+    Removing sys.o(i.SYS_ResetChip), (18 bytes).
+    Removing uart.o(.rev16_text), (4 bytes).
+    Removing uart.o(.revsh_text), (4 bytes).
+    Removing uart.o(i.NVIC_DisableIRQ), (20 bytes).
+    Removing uart.o(i.UART_ClearIntFlag), (56 bytes).
+    Removing uart.o(i.UART_Close), (6 bytes).
+    Removing uart.o(i.UART_DisableFlowCtrl), (12 bytes).
+    Removing uart.o(i.UART_DisableInt), (40 bytes).
+    Removing uart.o(i.UART_EnableFlowCtrl), (30 bytes).
+    Removing uart.o(i.UART_Read), (54 bytes).
+    Removing uart.o(i.UART_SelectIrDAMode), (164 bytes).
+    Removing uart.o(i.UART_SelectRS485Mode), (32 bytes).
+    Removing uart.o(i.UART_SetLine_Config), (184 bytes).
+    Removing uart.o(i.UART_SetTimeoutCnt), (22 bytes).
+    Removing uart.o(i.UART_Write), (54 bytes).
+    Removing usbd.o(.rev16_text), (4 bytes).
+    Removing usbd.o(.revsh_text), (4 bytes).
+    Removing usbd.o(i.USBD_LockEpStall), (12 bytes).
+    Removing usbd.o(i.USBD_SetConfigCallback), (12 bytes).
+    Removing usbd.o(i.USBD_SetVendorRequest), (12 bytes).
+    Removing spi.o(.rev16_text), (4 bytes).
+    Removing spi.o(.revsh_text), (4 bytes).
+    Removing spi.o(i.SPI_ClearIntFlag), (64 bytes).
+    Removing spi.o(i.SPI_ClearRxFIFO), (10 bytes).
+    Removing spi.o(i.SPI_ClearTxFIFO), (10 bytes).
+    Removing spi.o(i.SPI_Close), (124 bytes).
+    Removing spi.o(i.SPI_DisableAutoSS), (10 bytes).
+    Removing spi.o(i.SPI_DisableFIFO), (12 bytes).
+    Removing spi.o(i.SPI_DisableInt), (104 bytes).
+    Removing spi.o(i.SPI_EnableFIFO), (32 bytes).
+    Removing spi.o(i.SPI_EnableInt), (104 bytes).
+    Removing spi.o(i.SPI_GetBusClock), (148 bytes).
+    Removing spi.o(i.SPI_GetIntFlag), (146 bytes).
+    Removing spi.o(i.SPI_GetStatus), (126 bytes).
+    Removing spi.o(i.SPI_SetBusClock), (336 bytes).
+    Removing pdma.o(.rev16_text), (4 bytes).
+    Removing pdma.o(.revsh_text), (4 bytes).
+    Removing pdma.o(i.PDMA_Close), (12 bytes).
+    Removing pdma.o(i.PDMA_DisableInt), (20 bytes).
+    Removing fadd.o(.text), (178 bytes).
+    Removing fmul.o(.text), (122 bytes).
+    Removing ddiv.o(.text), (240 bytes).
+    Removing ffixui.o(.text), (40 bytes).
+    Removing dfixui.o(.text), (60 bytes).
+    Removing f2d.o(.text), (40 bytes).
+    Removing fepilogue.o(.text), (130 bytes).
+    Removing depilogue.o(.text), (190 bytes).
+    Removing dadd.o(.text), (356 bytes).
+    Removing dmul.o(.text), (208 bytes).
+    Removing dfixul.o(.text), (64 bytes).
+    Removing cdrcmple.o(.text), (40 bytes).
+    Removing depilogue.o(i.__ARM_clz), (46 bytes).
+
+162 unused section(s) (total 8655 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  startup_nuc123.o(RESET)
+    ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  isspace_c.o ABSOLUTE
+    ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  ctype_c.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _chval.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf_str.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  __0sscanf.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf_int.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _sgetc.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  scanf_char.o ABSOLUTE
+    ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  fadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  fmul.o ABSOLUTE
+    ..\Library\Device\Nuvoton\NUC123\Source\ARM\startup_NUC123.s 0x00000000   Number         0  startup_nuc123.o ABSOLUTE
+    ..\Library\Device\Nuvoton\NUC123\Source\system_NUC123.c 0x00000000   Number         0  system_nuc123.o ABSOLUTE
+    ..\Library\StdDriver\src\clk.c           0x00000000   Number         0  clk.o ABSOLUTE
+    ..\Library\StdDriver\src\gpio.c          0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\Library\StdDriver\src\pdma.c          0x00000000   Number         0  pdma.o ABSOLUTE
+    ..\Library\StdDriver\src\retarget.c      0x00000000   Number         0  retarget.o ABSOLUTE
+    ..\Library\StdDriver\src\spi.c           0x00000000   Number         0  spi.o ABSOLUTE
+    ..\Library\StdDriver\src\sys.c           0x00000000   Number         0  sys.o ABSOLUTE
+    ..\Library\StdDriver\src\uart.c          0x00000000   Number         0  uart.o ABSOLUTE
+    ..\Library\StdDriver\src\usbd.c          0x00000000   Number         0  usbd.o ABSOLUTE
+    ..\\Library\\Device\\Nuvoton\\NUC123\\Source\\system_NUC123.c 0x00000000   Number         0  system_nuc123.o ABSOLUTE
+    ..\\Library\\StdDriver\\src\\clk.c       0x00000000   Number         0  clk.o ABSOLUTE
+    ..\\Library\\StdDriver\\src\\gpio.c      0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\\Library\\StdDriver\\src\\pdma.c      0x00000000   Number         0  pdma.o ABSOLUTE
+    ..\\Library\\StdDriver\\src\\retarget.c  0x00000000   Number         0  retarget.o ABSOLUTE
+    ..\\Library\\StdDriver\\src\\spi.c       0x00000000   Number         0  spi.o ABSOLUTE
+    ..\\Library\\StdDriver\\src\\sys.c       0x00000000   Number         0  sys.o ABSOLUTE
+    ..\\Library\\StdDriver\\src\\uart.c      0x00000000   Number         0  uart.o ABSOLUTE
+    ..\\Library\\StdDriver\\src\\usbd.c      0x00000000   Number         0  usbd.o ABSOLUTE
+    ..\\user\\audio_control.c                0x00000000   Number         0  audio_control.o ABSOLUTE
+    ..\\user\\dataflash.c                    0x00000000   Number         0  dataflash.o ABSOLUTE
+    ..\\user\\delay.c                        0x00000000   Number         0  delay.o ABSOLUTE
+    ..\\user\\descriptors.c                  0x00000000   Number         0  descriptors.o ABSOLUTE
+    ..\\user\\display.c                      0x00000000   Number         0  display.o ABSOLUTE
+    ..\\user\\hid_transfer.c                 0x00000000   Number         0  hid_transfer.o ABSOLUTE
+    ..\\user\\i2c_simulate.c                 0x00000000   Number         0  i2c_simulate.o ABSOLUTE
+    ..\\user\\key.c                          0x00000000   Number         0  key.o ABSOLUTE
+    ..\\user\\main.c                         0x00000000   Number         0  main.o ABSOLUTE
+    ..\\user\\oled_dma.c                     0x00000000   Number         0  oled_dma.o ABSOLUTE
+    ..\\user\\strconv.c                      0x00000000   Number         0  strconv.o ABSOLUTE
+    ..\\user\\system_adc.c                   0x00000000   Number         0  system_adc.o ABSOLUTE
+    ..\\user\\system_timer.c                 0x00000000   Number         0  system_timer.o ABSOLUTE
+    ..\\user\\wifi_core.c                    0x00000000   Number         0  wifi_core.o ABSOLUTE
+    ..\\user\\wm8974.c                       0x00000000   Number         0  wm8974.o ABSOLUTE
+    ..\user\aes.c                            0x00000000   Number         0  aes.o ABSOLUTE
+    ..\user\audio_control.c                  0x00000000   Number         0  audio_control.o ABSOLUTE
+    ..\user\dataflash.c                      0x00000000   Number         0  dataflash.o ABSOLUTE
+    ..\user\delay.c                          0x00000000   Number         0  delay.o ABSOLUTE
+    ..\user\descriptors.c                    0x00000000   Number         0  descriptors.o ABSOLUTE
+    ..\user\display.c                        0x00000000   Number         0  display.o ABSOLUTE
+    ..\user\hid_transfer.c                   0x00000000   Number         0  hid_transfer.o ABSOLUTE
+    ..\user\i2c_simulate.c                   0x00000000   Number         0  i2c_simulate.o ABSOLUTE
+    ..\user\key.c                            0x00000000   Number         0  key.o ABSOLUTE
+    ..\user\main.c                           0x00000000   Number         0  main.o ABSOLUTE
+    ..\user\oled_dma.c                       0x00000000   Number         0  oled_dma.o ABSOLUTE
+    ..\user\strconv.c                        0x00000000   Number         0  strconv.o ABSOLUTE
+    ..\user\system_adc.c                     0x00000000   Number         0  system_adc.o ABSOLUTE
+    ..\user\system_timer.c                   0x00000000   Number         0  system_timer.o ABSOLUTE
+    ..\user\wifi_core.c                      0x00000000   Number         0  wifi_core.o ABSOLUTE
+    ..\user\wm8974.c                         0x00000000   Number         0  wm8974.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .emb_text                                0x000000d4   Section       28  retarget.o(.emb_text)
+    .text                                    0x000000f0   Section       76  startup_nuc123.o(.text)
+    Default_Handler                          0x0000011b   Thumb Code     2  startup_nuc123.o(.text)
+    .text                                    0x0000013c   Section        0  uidiv.o(.text)
+    .text                                    0x00000168   Section        0  idiv.o(.text)
+    .text                                    0x00000190   Section        0  memcpya.o(.text)
+    .text                                    0x000001b4   Section        0  memseta.o(.text)
+    .text                                    0x000001d8   Section        0  uldiv.o(.text)
+    .text                                    0x00000238   Section        0  llushr.o(.text)
+    .text                                    0x0000025c   Section       36  init.o(.text)
+    .text                                    0x00000280   Section        0  llshl.o(.text)
+    i.ADC_IRQHandler                         0x000002a0   Section        0  system_adc.o(i.ADC_IRQHandler)
+    i.AdcBubbleSort                          0x000002f8   Section        0  system_adc.o(i.AdcBubbleSort)
+    i.AdcNopRuning                           0x00000348   Section        0  system_adc.o(i.AdcNopRuning)
+    i.Battery_conver                         0x00000388   Section        0  system_adc.o(i.Battery_conver)
+    i.CLK_EnableModuleClock                  0x000003b8   Section        0  clk.o(i.CLK_EnableModuleClock)
+    i.CLK_EnablePLL                          0x000003dc   Section        0  clk.o(i.CLK_EnablePLL)
+    i.CLK_EnableXtalRC                       0x00000560   Section        0  clk.o(i.CLK_EnableXtalRC)
+    i.CLK_GetHCLKFreq                        0x00000570   Section        0  clk.o(i.CLK_GetHCLKFreq)
+    i.CLK_GetPLLClockFreq                    0x00000580   Section        0  system_nuc123.o(i.CLK_GetPLLClockFreq)
+    CLK_GetPLLClockFreq                      0x00000581   Thumb Code   112  system_nuc123.o(i.CLK_GetPLLClockFreq)
+    i.CLK_GetPLLClockFreq                    0x00000600   Section        0  clk.o(i.CLK_GetPLLClockFreq)
+    CLK_GetPLLClockFreq                      0x00000601   Thumb Code   112  clk.o(i.CLK_GetPLLClockFreq)
+    i.CLK_GetPLLClockFreq                    0x00000680   Section        0  uart.o(i.CLK_GetPLLClockFreq)
+    CLK_GetPLLClockFreq                      0x00000681   Thumb Code   112  uart.o(i.CLK_GetPLLClockFreq)
+    i.CLK_GetPLLClockFreq                    0x00000700   Section        0  spi.o(i.CLK_GetPLLClockFreq)
+    CLK_GetPLLClockFreq                      0x00000701   Thumb Code   112  spi.o(i.CLK_GetPLLClockFreq)
+    i.CLK_SetCoreClock                       0x00000780   Section        0  clk.o(i.CLK_SetCoreClock)
+    i.CLK_SetHCLK                            0x0000081c   Section        0  clk.o(i.CLK_SetHCLK)
+    i.CLK_SetModuleClock                     0x0000087c   Section        0  clk.o(i.CLK_SetModuleClock)
+    i.CLK_SetSysTickClockSrc                 0x0000092c   Section        0  clk.o(i.CLK_SetSysTickClockSrc)
+    i.CLK_WaitClockReady                     0x00000940   Section        0  clk.o(i.CLK_WaitClockReady)
+    i.ClearMICFullstate                      0x00000968   Section        0  main.o(i.ClearMICFullstate)
+    i.DataFlashClean_NS                      0x00000a00   Section        0  dataflash.o(i.DataFlashClean_NS)
+    i.DataFlashFindDataNumber_NS             0x00000a64   Section        0  dataflash.o(i.DataFlashFindDataNumber_NS)
+    i.DataFlashInit                          0x00000b40   Section        0  dataflash.o(i.DataFlashInit)
+    i.DataFlashRead_NS                       0x00000bb8   Section        0  dataflash.o(i.DataFlashRead_NS)
+    i.DataFlashSave                          0x00000be8   Section        0  dataflash.o(i.DataFlashSave)
+    i.DisplayAPLose                          0x00000ca8   Section        0  display.o(i.DisplayAPLose)
+    i.DisplayHostLose                        0x00000d14   Section        0  display.o(i.DisplayHostLose)
+    i.DisplayMicStartTimeStatement           0x00000d80   Section        0  display.o(i.DisplayMicStartTimeStatement)
+    i.DisplayPopupTimeoutPolling             0x00000edc   Section        0  display.o(i.DisplayPopupTimeoutPolling)
+    i.DisplayRestoreIDRepeatMode             0x00000f9c   Section        0  display.o(i.DisplayRestoreIDRepeatMode)
+    i.DisplayRestoreMeetingMode              0x0000100c   Section        0  display.o(i.DisplayRestoreMeetingMode)
+    i.DisplayRestoreSetIDMode                0x000012a8   Section        0  display.o(i.DisplayRestoreSetIDMode)
+    i.DisplayRestoreSignMode                 0x00001388   Section        0  display.o(i.DisplayRestoreSignMode)
+    i.DisplayRestoreVoteMode                 0x000014ec   Section        0  display.o(i.DisplayRestoreVoteMode)
+    i.DisplaySetPopup                        0x00001588   Section        0  display.o(i.DisplaySetPopup)
+    i.DisplayStartupFlash                    0x000015bc   Section        0  display.o(i.DisplayStartupFlash)
+    i.DisplayStatusInfo                      0x0000160c   Section        0  display.o(i.DisplayStatusInfo)
+    i.DisplaySystemInfo                      0x000016c0   Section        0  display.o(i.DisplaySystemInfo)
+    i.DisplayUartError                       0x0000173c   Section        0  display.o(i.DisplayUartError)
+    i.EP3_Handler                            0x00001784   Section        0  hid_transfer.o(i.EP3_Handler)
+    i.FMC_Read                               0x000017c8   Section        0  dataflash.o(i.FMC_Read)
+    FMC_Read                                 0x000017c9   Thumb Code    48  dataflash.o(i.FMC_Read)
+    i.FMC_ReadUID                            0x000017fc   Section        0  dataflash.o(i.FMC_ReadUID)
+    FMC_ReadUID                              0x000017fd   Thumb Code    48  dataflash.o(i.FMC_ReadUID)
+    i.GpioNormalInit                         0x00001830   Section        0  main.o(i.GpioNormalInit)
+    i.HID_ClassRequest                       0x000019c8   Section        0  hid_transfer.o(i.HID_ClassRequest)
+    i.HID_Init                               0x00001a4c   Section        0  hid_transfer.o(i.HID_Init)
+    i.Hard_Fault_Handler                     0x00001aec   Section        0  retarget.o(i.Hard_Fault_Handler)
+    __tagsym$$used                           0x00001aed   Number         0  retarget.o(i.Hard_Fault_Handler)
+    i.HardwordCloseMic                       0x00001b18   Section        0  audio_control.o(i.HardwordCloseMic)
+    i.HardwordOpenMic                        0x00001b88   Section        0  audio_control.o(i.HardwordOpenMic)
+    i.HostCommandSend                        0x00001bc4   Section        0  wifi_core.o(i.HostCommandSend)
+    i.HostCommandSendEnterSystem             0x00001c14   Section        0  wifi_core.o(i.HostCommandSendEnterSystem)
+    i.HostDisconnectDo                       0x00001c54   Section        0  main.o(i.HostDisconnectDo)
+    i.HostRecvCheck                          0x00001c98   Section        0  wifi_core.o(i.HostRecvCheck)
+    HostRecvCheck                            0x00001c99   Thumb Code  3708  wifi_core.o(i.HostRecvCheck)
+    i.IIC_BUS_Write_7Bitadd_9Bitdata         0x00002b1c   Section        0  i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata)
+    i.IIC_Send_Byte                          0x00002b68   Section        0  i2c_simulate.o(i.IIC_Send_Byte)
+    i.IIC_Start                              0x00002bc2   Section        0  i2c_simulate.o(i.IIC_Start)
+    i.IIC_Stop                               0x00002bf2   Section        0  i2c_simulate.o(i.IIC_Stop)
+    i.IIC_Wait_Ack                           0x00002c22   Section        0  i2c_simulate.o(i.IIC_Wait_Ack)
+    i.KeyInputPolling                        0x00002c6c   Section        0  key.o(i.KeyInputPolling)
+    i.LedFlashPolling                        0x00002e44   Section        0  main.o(i.LedFlashPolling)
+    i.LedStaticControl                       0x00002f44   Section        0  main.o(i.LedStaticControl)
+    i.M_Pow_N                                0x00002fa8   Section        0  strconv.o(i.M_Pow_N)
+    i.MicStatementPolling                    0x00002fc4   Section        0  main.o(i.MicStatementPolling)
+    i.NVIC_EnableIRQ                         0x00003204   Section        0  uart.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x00003205   Thumb Code    14  uart.o(i.NVIC_EnableIRQ)
+    i.NVIC_SetPriority                       0x00003218   Section        0  system_timer.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x00003219   Thumb Code   110  system_timer.o(i.NVIC_SetPriority)
+    i.NVIC_SetPriority                       0x00003290   Section        0  wifi_core.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x00003291   Thumb Code   110  wifi_core.o(i.NVIC_SetPriority)
+    i.OLEDCPUClear                           0x00003308   Section        0  oled_dma.o(i.OLEDCPUClear)
+    OLEDCPUClear                             0x00003309   Thumb Code    42  oled_dma.o(i.OLEDCPUClear)
+    i.OLEDCPUSendCmd                         0x00003334   Section        0  oled_dma.o(i.OLEDCPUSendCmd)
+    OLEDCPUSendCmd                           0x00003335   Thumb Code    52  oled_dma.o(i.OLEDCPUSendCmd)
+    i.OLEDCPUSendDat                         0x00003374   Section        0  oled_dma.o(i.OLEDCPUSendDat)
+    OLEDCPUSendDat                           0x00003375   Thumb Code    54  oled_dma.o(i.OLEDCPUSendDat)
+    i.OLEDCPUSendOff                         0x000033b8   Section        0  oled_dma.o(i.OLEDCPUSendOff)
+    i.OLEDCPUSetCol                          0x000033c2   Section        0  oled_dma.o(i.OLEDCPUSetCol)
+    OLEDCPUSetCol                            0x000033c3   Thumb Code    26  oled_dma.o(i.OLEDCPUSetCol)
+    i.OLEDCPUSetPage                         0x000033dc   Section        0  oled_dma.o(i.OLEDCPUSetPage)
+    OLEDCPUSetPage                           0x000033dd   Thumb Code    26  oled_dma.o(i.OLEDCPUSetPage)
+    i.OLEDDMAClearPic                        0x000033f8   Section        0  oled_dma.o(i.OLEDDMAClearPic)
+    i.OLEDDMAFill                            0x00003428   Section        0  oled_dma.o(i.OLEDDMAFill)
+    i.OLEDDMAPolling                         0x0000349c   Section        0  oled_dma.o(i.OLEDDMAPolling)
+    i.OLEDDMAShowChar                        0x000034f0   Section        0  oled_dma.o(i.OLEDDMAShowChar)
+    i.OLEDDMAShowNumFill                     0x0000357c   Section        0  oled_dma.o(i.OLEDDMAShowNumFill)
+    i.OLEDDMAShowPic                         0x000035f4   Section        0  oled_dma.o(i.OLEDDMAShowPic)
+    i.OLEDDMAShowStr                         0x0000367c   Section        0  oled_dma.o(i.OLEDDMAShowStr)
+    i.OLEDDMAUpdate                          0x000036b8   Section        0  oled_dma.o(i.OLEDDMAUpdate)
+    i.OLEDDMAUpdateImmediately               0x000036e4   Section        0  oled_dma.o(i.OLEDDMAUpdateImmediately)
+    i.OLEDNegation                           0x00003730   Section        0  oled_dma.o(i.OLEDNegation)
+    i.OLEDRegInit                            0x00003790   Section        0  oled_dma.o(i.OLEDRegInit)
+    OLEDRegInit                              0x00003791   Thumb Code   152  oled_dma.o(i.OLEDRegInit)
+    i.OLEDSpiInit                            0x00003828   Section        0  oled_dma.o(i.OLEDSpiInit)
+    i.PDMA_EnableInt                         0x00003960   Section        0  pdma.o(i.PDMA_EnableInt)
+    i.PDMA_IRQHandler                        0x00003974   Section        0  oled_dma.o(i.PDMA_IRQHandler)
+    i.PDMA_Open                              0x00003980   Section        0  pdma.o(i.PDMA_Open)
+    i.PDMA_SetTransferAddr                   0x00003994   Section        0  pdma.o(i.PDMA_SetTransferAddr)
+    i.PDMA_SetTransferCnt                    0x000039b8   Section        0  pdma.o(i.PDMA_SetTransferCnt)
+    i.PDMA_SetTransferMode                   0x00003a00   Section        0  pdma.o(i.PDMA_SetTransferMode)
+    i.PDMA_Trigger                           0x00003c1c   Section        0  pdma.o(i.PDMA_Trigger)
+    i.SPI_EnableAutoSS                       0x00003c34   Section        0  spi.o(i.SPI_EnableAutoSS)
+    i.SPI_Open                               0x00003c4c   Section        0  spi.o(i.SPI_Open)
+    i.SYS_ResetModule                        0x00003e14   Section        0  sys.o(i.SYS_ResetModule)
+    i.SYS_UnlockReg                          0x00003e44   Section        0  dataflash.o(i.SYS_UnlockReg)
+    SYS_UnlockReg                            0x00003e45   Thumb Code    26  dataflash.o(i.SYS_UnlockReg)
+    i.SendChar                               0x00003e64   Section        0  retarget.o(i.SendChar)
+    i.SendChar_ToUART                        0x00003e70   Section        0  retarget.o(i.SendChar_ToUART)
+    i.SetMicSen2WM8974                       0x00003ea4   Section        0  audio_control.o(i.SetMicSen2WM8974)
+    i.SysTimerDelay                          0x00003eb8   Section        0  delay.o(i.SysTimerDelay)
+    i.SystemAdcInit                          0x00003ee8   Section        0  system_adc.o(i.SystemAdcInit)
+    i.SystemClockInit                        0x00003fc0   Section        0  main.o(i.SystemClockInit)
+    i.SystemConnectPolling                   0x00004024   Section        0  main.o(i.SystemConnectPolling)
+    i.SystemCoreClockUpdate                  0x00004138   Section        0  system_nuc123.o(i.SystemCoreClockUpdate)
+    i.SystemGlobalInit                       0x000041a8   Section        0  main.o(i.SystemGlobalInit)
+    i.SystemGlobalSet                        0x00004344   Section        0  main.o(i.SystemGlobalSet)
+    i.SystemInit                             0x000043fc   Section        0  system_nuc123.o(i.SystemInit)
+    i.SystemPowerDown                        0x00004400   Section        0  main.o(i.SystemPowerDown)
+    i.SystemReadAdcPolling                   0x00004444   Section        0  system_adc.o(i.SystemReadAdcPolling)
+    i.SystemTimer0Init                       0x00004700   Section        0  system_timer.o(i.SystemTimer0Init)
+    i.TMR0_IRQHandler                        0x00004780   Section        0  system_timer.o(i.TMR0_IRQHandler)
+    i.U32_Change_U8_4                        0x000047e4   Section        0  strconv.o(i.U32_Change_U8_4)
+    i.U8_4_Change_U32                        0x000047f8   Section        0  strconv.o(i.U8_4_Change_U32)
+    i.UART1_IRQHandler                       0x00004814   Section        0  wifi_core.o(i.UART1_IRQHandler)
+    i.UART_EnableInt                         0x000048f4   Section        0  uart.o(i.UART_EnableInt)
+    i.UART_Open                              0x0000491c   Section        0  uart.o(i.UART_Open)
+    i.USBD_CtrlIn                            0x000049d4   Section        0  usbd.o(i.USBD_CtrlIn)
+    i.USBD_CtrlOut                           0x00004ac4   Section        0  usbd.o(i.USBD_CtrlOut)
+    i.USBD_GetDescriptor                     0x00004b28   Section        0  usbd.o(i.USBD_GetDescriptor)
+    i.USBD_GetSetupPacket                    0x00004cbc   Section        0  usbd.o(i.USBD_GetSetupPacket)
+    i.USBD_IRQHandler                        0x00004cd0   Section        0  hid_transfer.o(i.USBD_IRQHandler)
+    i.USBD_MemCopy                           0x00004e38   Section        0  hid_transfer.o(i.USBD_MemCopy)
+    USBD_MemCopy                             0x00004e39   Thumb Code    22  hid_transfer.o(i.USBD_MemCopy)
+    i.USBD_MemCopy                           0x00004e4e   Section        0  usbd.o(i.USBD_MemCopy)
+    USBD_MemCopy                             0x00004e4f   Thumb Code    22  usbd.o(i.USBD_MemCopy)
+    i.USBD_Open                              0x00004e64   Section        0  usbd.o(i.USBD_Open)
+    i.USBD_PrepareCtrlIn                     0x00004eac   Section        0  usbd.o(i.USBD_PrepareCtrlIn)
+    i.USBD_PrepareCtrlOut                    0x00004f34   Section        0  usbd.o(i.USBD_PrepareCtrlOut)
+    i.USBD_ProcessSetupPacket                0x00004f60   Section        0  usbd.o(i.USBD_ProcessSetupPacket)
+    i.USBD_SetStall                          0x00004fdc   Section        0  hid_transfer.o(i.USBD_SetStall)
+    USBD_SetStall                            0x00004fdd   Thumb Code    50  hid_transfer.o(i.USBD_SetStall)
+    i.USBD_StandardRequest                   0x00005014   Section        0  usbd.o(i.USBD_StandardRequest)
+    i.USBD_Start                             0x00005358   Section        0  usbd.o(i.USBD_Start)
+    i.USBD_SwReset                           0x000053c0   Section        0  usbd.o(i.USBD_SwReset)
+    i.UsbRecvPolling                         0x00005434   Section        0  hid_transfer.o(i.UsbRecvPolling)
+    i.UsbStringCompare                       0x0000553c   Section        0  hid_transfer.o(i.UsbStringCompare)
+    i.VoiceModeNoSignalResetTimer            0x000055b0   Section        0  system_adc.o(i.VoiceModeNoSignalResetTimer)
+    i.WM8974_SCK                             0x000055c0   Section        0  wm8974.o(i.WM8974_SCK)
+    WM8974_SCK                               0x000055c1   Thumb Code     6  wm8974.o(i.WM8974_SCK)
+    i.WM8974_SDA_Mode                        0x000055cc   Section        0  wm8974.o(i.WM8974_SDA_Mode)
+    WM8974_SDA_Mode                          0x000055cd   Thumb Code    40  wm8974.o(i.WM8974_SDA_Mode)
+    i.WM8974_SDI                             0x000055f8   Section        0  wm8974.o(i.WM8974_SDI)
+    WM8974_SDI                               0x000055f9   Thumb Code     8  wm8974.o(i.WM8974_SDI)
+    i.WM8974_SDO                             0x00005604   Section        0  wm8974.o(i.WM8974_SDO)
+    WM8974_SDO                               0x00005605   Thumb Code     6  wm8974.o(i.WM8974_SDO)
+    i.WifiCoreCommandSend                    0x00005610   Section        0  wifi_core.o(i.WifiCoreCommandSend)
+    i.WifiCoreRecvPolling                    0x00005654   Section        0  wifi_core.o(i.WifiCoreRecvPolling)
+    i.WifiCoreUSARTInit                      0x000058d4   Section        0  wifi_core.o(i.WifiCoreUSARTInit)
+    i.WifiCoreWriteByte                      0x00005988   Section        0  wifi_core.o(i.WifiCoreWriteByte)
+    i.Wm8974RegisterInit                     0x000059b8   Section        0  wm8974.o(i.Wm8974RegisterInit)
+    i.Wm8974SetEQValue                       0x00005aac   Section        0  wm8974.o(i.Wm8974SetEQValue)
+    i.Wm8974SetFilter                        0x00005acc   Section        0  wm8974.o(i.Wm8974SetFilter)
+    i.Wm8974SetInpgaHexVolume                0x00005af4   Section        0  wm8974.o(i.Wm8974SetInpgaHexVolume)
+    i.Wm8974SetMonoVolCtrl                   0x00005b08   Section        0  wm8974.o(i.Wm8974SetMonoVolCtrl)
+    i.Wm8974SetSpkVolCtrl                    0x00005b2c   Section        0  wm8974.o(i.Wm8974SetSpkVolCtrl)
+    i.Wm8974SpecialParmInit                  0x00005b50   Section        0  main.o(i.Wm8974SpecialParmInit)
+    i.__0printf$8                            0x00005b80   Section        0  printf8.o(i.__0printf$8)
+    i.__0sprintf$8                           0x00005ba0   Section        0  printf8.o(i.__0sprintf$8)
+    i.__ARM_common_switch8                   0x00005bc8   Section        0  main.o(i.__ARM_common_switch8)
+    i.__scatterload_copy                     0x00005be4   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00005bf2   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00005bf4   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x00005c04   Section        0  printf8.o(i._printf_core)
+    _printf_core                             0x00005c05   Thumb Code  1020  printf8.o(i._printf_core)
+    i._printf_post_padding                   0x0000602c   Section        0  printf8.o(i._printf_post_padding)
+    _printf_post_padding                     0x0000602d   Thumb Code    32  printf8.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x0000604c   Section        0  printf8.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x0000604d   Thumb Code    44  printf8.o(i._printf_pre_padding)
+    i._sputc                                 0x00006078   Section        0  printf8.o(i._sputc)
+    _sputc                                   0x00006079   Thumb Code    10  printf8.o(i._sputc)
+    i.delay_ms                               0x00006082   Section        0  delay.o(i.delay_ms)
+    i.delay_us                               0x00006098   Section        0  delay.o(i.delay_us)
+    i.fputc                                  0x000060a4   Section        0  retarget.o(i.fputc)
+    i.keyInputGet                            0x000060b4   Section        0  key.o(i.keyInputGet)
+    keyInputGet                              0x000060b5   Thumb Code   200  key.o(i.keyInputGet)
+    i.main                                   0x00006194   Section        0  main.o(i.main)
+    i.stackDump                              0x00006224   Section        0  retarget.o(i.stackDump)
+    stackDump                                0x00006225   Thumb Code    70  retarget.o(i.stackDump)
+    .constdata                               0x000062cc   Section       20  system_adc.o(.constdata)
+    battery_rank_list                        0x000062cc   Data          20  system_adc.o(.constdata)
+    .constdata                               0x000062e0   Section      200  descriptors.o(.constdata)
+    .constdata                               0x000063a8   Section      164  hid_transfer.o(.constdata)
+    .constdata                               0x0000644c   Section       10  wifi_core.o(.constdata)
+    rssi_conv_list                           0x0000644c   Data          10  wifi_core.o(.constdata)
+    .constdata                               0x00006456   Section     1520  oled_dma.o(.constdata)
+    OLED_Ascii_8_16                          0x00006456   Data        1520  oled_dma.o(.constdata)
+    .constdata                               0x00006a46   Section    16620  display.o(.constdata)
+    .constdata                               0x0000ab34   Section       12  clk.o(.constdata)
+    .constdata                               0x0000ab40   Section       48  uart.o(.constdata)
+    .data                                    0x20000000   Section       44  system_nuc123.o(.data)
+    .data                                    0x2000002c   Section       20  main.o(.data)
+    apply_count                              0x2000003e   Data           2  main.o(.data)
+    .data                                    0x20000040   Section       20  wm8974.o(.data)
+    WM8974_OPT_STRUCT                        0x20000040   Data          20  wm8974.o(.data)
+    .data                                    0x20000054   Section        4  dataflash.o(.data)
+    .data                                    0x20000058   Section        5  system_adc.o(.data)
+    wm8974_recheck_count                     0x20000058   Data           2  system_adc.o(.data)
+    mic_recheck_count                        0x2000005a   Data           2  system_adc.o(.data)
+    ui_update                                0x2000005c   Data           1  system_adc.o(.data)
+    .data                                    0x2000005e   Section       12  system_timer.o(.data)
+    .data                                    0x2000006a   Section       19  key.o(.data)
+    key_info                                 0x2000006a   Data          12  key.o(.data)
+    key_press                                0x20000076   Data           6  key.o(.data)
+    last_value                               0x2000007c   Data           1  key.o(.data)
+    .data                                    0x20000080   Section       24  descriptors.o(.data)
+    .data                                    0x20000098   Section        8  display.o(.data)
+    step                                     0x2000009c   Data           1  display.o(.data)
+    time                                     0x2000009e   Data           2  display.o(.data)
+    .data                                    0x200000a0   Section        8  retarget.o(.data)
+    .data                                    0x200000a8   Section       73  usbd.o(.data)
+    g_usbd_CtrlInPointer                     0x200000b4   Data           4  usbd.o(.data)
+    g_usbd_CtrlInSize                        0x200000b8   Data           4  usbd.o(.data)
+    g_usbd_CtrlOutPointer                    0x200000bc   Data           4  usbd.o(.data)
+    g_usbd_CtrlOutSize                       0x200000c0   Data           4  usbd.o(.data)
+    g_usbd_CtrlOutSizeLimit                  0x200000c4   Data           4  usbd.o(.data)
+    g_usbd_UsbAddr                           0x200000c8   Data           4  usbd.o(.data)
+    g_usbd_UsbConfig                         0x200000cc   Data           4  usbd.o(.data)
+    g_usbd_CtrlMaxPktSize                    0x200000d0   Data           4  usbd.o(.data)
+    g_usbd_UsbAltInterface                   0x200000d4   Data           4  usbd.o(.data)
+    u8ZeroFlag                               0x200000f0   Data           1  usbd.o(.data)
+    .bss                                     0x200000f4   Section      165  main.o(.bss)
+    .bss                                     0x2000019a   Section       20  system_adc.o(.bss)
+    meet_unit_adc                            0x2000019a   Data          20  system_adc.o(.bss)
+    .bss                                     0x200001ae   Section       28  audio_control.o(.bss)
+    .bss                                     0x200001ca   Section      514  hid_transfer.o(.bss)
+    .bss                                     0x200003cc   Section      820  wifi_core.o(.bss)
+    .bss                                     0x20000700   Section     1036  oled_dma.o(.bss)
+    STACK                                    0x20000b10   Section     1024  startup_nuc123.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_nuc123.o(RESET)
+    _printf_a                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_c                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_charcount                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_d                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_e                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_f                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_flags                            0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_dec                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_fp_hex                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_g                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_i                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_int_dec                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_l                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ll                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lld                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_lli                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llo                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llu                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_llx                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_dec                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_hex                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_longlong_oct                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_ls                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_mbtowc                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_n                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_o                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_p                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_percent                          0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_pre_padding                      0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_return_value                     0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_s                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_sizespec                         0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_str                              0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_signed                  0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_truncate_unsigned                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_u                                0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wc                               0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_wctomb                           0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_widthprec                        0x00000000   Number         0  stubs.o ABSOLUTE
+    _printf_x                                0x00000000   Number         0  stubs.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    _scanf_longlong                           - Undefined Weak Reference
+    _scanf_real                               - Undefined Weak Reference
+    __main                                   0x000000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    HardFault_Handler                        0x000000d5   Thumb Code    24  retarget.o(.emb_text)
+    Reset_Handler                            0x000000f1   Thumb Code    32  startup_nuc123.o(.text)
+    NMI_Handler                              0x00000111   Thumb Code     2  startup_nuc123.o(.text)
+    SVC_Handler                              0x00000115   Thumb Code     2  startup_nuc123.o(.text)
+    PendSV_Handler                           0x00000117   Thumb Code     2  startup_nuc123.o(.text)
+    SysTick_Handler                          0x00000119   Thumb Code     2  startup_nuc123.o(.text)
+    ACMP_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    BOD_IRQHandler                           0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    CAN0_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    CAN1_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    EINT0_IRQHandler                         0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    EINT1_IRQHandler                         0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    GPAB_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    GPCDF_IRQHandler                         0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    I2C0_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    I2C1_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    I2S_IRQHandler                           0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    PS2_IRQHandler                           0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    PWMA_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    PWRWU_IRQHandler                         0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    RTC_IRQHandler                           0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    SC012_IRQHandler                         0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    SPI0_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    SPI1_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    SPI2_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    SPI3_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    TMR1_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    TMR2_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    TMR3_IRQHandler                          0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    UART0_IRQHandler                         0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    WDT_IRQHandler                           0x0000011b   Thumb Code     0  startup_nuc123.o(.text)
+    __aeabi_uidiv                            0x0000013d   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x0000013d   Thumb Code    44  uidiv.o(.text)
+    __aeabi_idiv                             0x00000169   Thumb Code     0  idiv.o(.text)
+    __aeabi_idivmod                          0x00000169   Thumb Code    40  idiv.o(.text)
+    __aeabi_memcpy                           0x00000191   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x00000191   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x00000191   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x000001b5   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x000001b5   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x000001b5   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x000001c3   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x000001c3   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x000001c3   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x000001c7   Thumb Code    18  memseta.o(.text)
+    __aeabi_uldivmod                         0x000001d9   Thumb Code    96  uldiv.o(.text)
+    __aeabi_llsr                             0x00000239   Thumb Code    34  llushr.o(.text)
+    _ll_ushift_r                             0x00000239   Thumb Code     0  llushr.o(.text)
+    __scatterload                            0x0000025d   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x0000025d   Thumb Code     0  init.o(.text)
+    __aeabi_llsl                             0x00000281   Thumb Code    32  llshl.o(.text)
+    _ll_shift_l                              0x00000281   Thumb Code     0  llshl.o(.text)
+    ADC_IRQHandler                           0x000002a1   Thumb Code    80  system_adc.o(i.ADC_IRQHandler)
+    AdcBubbleSort                            0x000002f9   Thumb Code    78  system_adc.o(i.AdcBubbleSort)
+    AdcNopRuning                             0x00000349   Thumb Code    54  system_adc.o(i.AdcNopRuning)
+    Battery_conver                           0x00000389   Thumb Code    44  system_adc.o(i.Battery_conver)
+    CLK_EnableModuleClock                    0x000003b9   Thumb Code    32  clk.o(i.CLK_EnableModuleClock)
+    CLK_EnablePLL                            0x000003dd   Thumb Code   342  clk.o(i.CLK_EnablePLL)
+    CLK_EnableXtalRC                         0x00000561   Thumb Code    12  clk.o(i.CLK_EnableXtalRC)
+    CLK_GetHCLKFreq                          0x00000571   Thumb Code    12  clk.o(i.CLK_GetHCLKFreq)
+    CLK_SetCoreClock                         0x00000781   Thumb Code   144  clk.o(i.CLK_SetCoreClock)
+    CLK_SetHCLK                              0x0000081d   Thumb Code    92  clk.o(i.CLK_SetHCLK)
+    CLK_SetModuleClock                       0x0000087d   Thumb Code   158  clk.o(i.CLK_SetModuleClock)
+    CLK_SetSysTickClockSrc                   0x0000092d   Thumb Code    16  clk.o(i.CLK_SetSysTickClockSrc)
+    CLK_WaitClockReady                       0x00000941   Thumb Code    32  clk.o(i.CLK_WaitClockReady)
+    ClearMICFullstate                        0x00000969   Thumb Code   114  main.o(i.ClearMICFullstate)
+    DataFlashClean_NS                        0x00000a01   Thumb Code    94  dataflash.o(i.DataFlashClean_NS)
+    DataFlashFindDataNumber_NS               0x00000a65   Thumb Code   206  dataflash.o(i.DataFlashFindDataNumber_NS)
+    DataFlashInit                            0x00000b41   Thumb Code   106  dataflash.o(i.DataFlashInit)
+    DataFlashRead_NS                         0x00000bb9   Thumb Code    42  dataflash.o(i.DataFlashRead_NS)
+    DataFlashSave                            0x00000be9   Thumb Code   170  dataflash.o(i.DataFlashSave)
+    DisplayAPLose                            0x00000ca9   Thumb Code    68  display.o(i.DisplayAPLose)
+    DisplayHostLose                          0x00000d15   Thumb Code    68  display.o(i.DisplayHostLose)
+    DisplayMicStartTimeStatement             0x00000d81   Thumb Code   274  display.o(i.DisplayMicStartTimeStatement)
+    DisplayPopupTimeoutPolling               0x00000edd   Thumb Code   138  display.o(i.DisplayPopupTimeoutPolling)
+    DisplayRestoreIDRepeatMode               0x00000f9d   Thumb Code    76  display.o(i.DisplayRestoreIDRepeatMode)
+    DisplayRestoreMeetingMode                0x0000100d   Thumb Code   516  display.o(i.DisplayRestoreMeetingMode)
+    DisplayRestoreSetIDMode                  0x000012a9   Thumb Code   168  display.o(i.DisplayRestoreSetIDMode)
+    DisplayRestoreSignMode                   0x00001389   Thumb Code   274  display.o(i.DisplayRestoreSignMode)
+    DisplayRestoreVoteMode                   0x000014ed   Thumb Code   118  display.o(i.DisplayRestoreVoteMode)
+    DisplaySetPopup                          0x00001589   Thumb Code    46  display.o(i.DisplaySetPopup)
+    DisplayStartupFlash                      0x000015bd   Thumb Code    68  display.o(i.DisplayStartupFlash)
+    DisplayStatusInfo                        0x0000160d   Thumb Code   146  display.o(i.DisplayStatusInfo)
+    DisplaySystemInfo                        0x000016c1   Thumb Code    94  display.o(i.DisplaySystemInfo)
+    DisplayUartError                         0x0000173d   Thumb Code    44  display.o(i.DisplayUartError)
+    EP3_Handler                              0x00001785   Thumb Code    50  hid_transfer.o(i.EP3_Handler)
+    GpioNormalInit                           0x00001831   Thumb Code   388  main.o(i.GpioNormalInit)
+    HID_ClassRequest                         0x000019c9   Thumb Code   128  hid_transfer.o(i.HID_ClassRequest)
+    HID_Init                                 0x00001a4d   Thumb Code   132  hid_transfer.o(i.HID_Init)
+    Hard_Fault_Handler                       0x00001aed   Thumb Code    18  retarget.o(i.Hard_Fault_Handler)
+    HardwordCloseMic                         0x00001b19   Thumb Code   106  audio_control.o(i.HardwordCloseMic)
+    HardwordOpenMic                          0x00001b89   Thumb Code    54  audio_control.o(i.HardwordOpenMic)
+    HostCommandSend                          0x00001bc5   Thumb Code    80  wifi_core.o(i.HostCommandSend)
+    HostCommandSendEnterSystem               0x00001c15   Thumb Code    54  wifi_core.o(i.HostCommandSendEnterSystem)
+    HostDisconnectDo                         0x00001c55   Thumb Code    48  main.o(i.HostDisconnectDo)
+    IIC_BUS_Write_7Bitadd_9Bitdata           0x00002b1d   Thumb Code    76  i2c_simulate.o(i.IIC_BUS_Write_7Bitadd_9Bitdata)
+    IIC_Send_Byte                            0x00002b69   Thumb Code    90  i2c_simulate.o(i.IIC_Send_Byte)
+    IIC_Start                                0x00002bc3   Thumb Code    48  i2c_simulate.o(i.IIC_Start)
+    IIC_Stop                                 0x00002bf3   Thumb Code    48  i2c_simulate.o(i.IIC_Stop)
+    IIC_Wait_Ack                             0x00002c23   Thumb Code    72  i2c_simulate.o(i.IIC_Wait_Ack)
+    KeyInputPolling                          0x00002c6d   Thumb Code   412  key.o(i.KeyInputPolling)
+    LedFlashPolling                          0x00002e45   Thumb Code   236  main.o(i.LedFlashPolling)
+    LedStaticControl                         0x00002f45   Thumb Code    86  main.o(i.LedStaticControl)
+    M_Pow_N                                  0x00002fa9   Thumb Code    26  strconv.o(i.M_Pow_N)
+    MicStatementPolling                      0x00002fc5   Thumb Code   490  main.o(i.MicStatementPolling)
+    OLEDCPUSendOff                           0x000033b9   Thumb Code    10  oled_dma.o(i.OLEDCPUSendOff)
+    OLEDDMAClearPic                          0x000033f9   Thumb Code    40  oled_dma.o(i.OLEDDMAClearPic)
+    OLEDDMAFill                              0x00003429   Thumb Code   106  oled_dma.o(i.OLEDDMAFill)
+    OLEDDMAPolling                           0x0000349d   Thumb Code    66  oled_dma.o(i.OLEDDMAPolling)
+    OLEDDMAShowChar                          0x000034f1   Thumb Code   128  oled_dma.o(i.OLEDDMAShowChar)
+    OLEDDMAShowNumFill                       0x0000357d   Thumb Code   120  oled_dma.o(i.OLEDDMAShowNumFill)
+    OLEDDMAShowPic                           0x000035f5   Thumb Code   128  oled_dma.o(i.OLEDDMAShowPic)
+    OLEDDMAShowStr                           0x0000367d   Thumb Code    60  oled_dma.o(i.OLEDDMAShowStr)
+    OLEDDMAUpdate                            0x000036b9   Thumb Code    32  oled_dma.o(i.OLEDDMAUpdate)
+    OLEDDMAUpdateImmediately                 0x000036e5   Thumb Code    60  oled_dma.o(i.OLEDDMAUpdateImmediately)
+    OLEDNegation                             0x00003731   Thumb Code    84  oled_dma.o(i.OLEDNegation)
+    OLEDSpiInit                              0x00003829   Thumb Code   272  oled_dma.o(i.OLEDSpiInit)
+    PDMA_EnableInt                           0x00003961   Thumb Code    16  pdma.o(i.PDMA_EnableInt)
+    PDMA_IRQHandler                          0x00003975   Thumb Code     8  oled_dma.o(i.PDMA_IRQHandler)
+    PDMA_Open                                0x00003981   Thumb Code    14  pdma.o(i.PDMA_Open)
+    PDMA_SetTransferAddr                     0x00003995   Thumb Code    30  pdma.o(i.PDMA_SetTransferAddr)
+    PDMA_SetTransferCnt                      0x000039b9   Thumb Code    66  pdma.o(i.PDMA_SetTransferCnt)
+    PDMA_SetTransferMode                     0x00003a01   Thumb Code   530  pdma.o(i.PDMA_SetTransferMode)
+    PDMA_Trigger                             0x00003c1d   Thumb Code    16  pdma.o(i.PDMA_Trigger)
+    SPI_EnableAutoSS                         0x00003c35   Thumb Code    22  spi.o(i.SPI_EnableAutoSS)
+    SPI_Open                                 0x00003c4d   Thumb Code   442  spi.o(i.SPI_Open)
+    SYS_ResetModule                          0x00003e15   Thumb Code    48  sys.o(i.SYS_ResetModule)
+    SendChar                                 0x00003e65   Thumb Code    12  retarget.o(i.SendChar)
+    SendChar_ToUART                          0x00003e71   Thumb Code    48  retarget.o(i.SendChar_ToUART)
+    SetMicSen2WM8974                         0x00003ea5   Thumb Code    20  audio_control.o(i.SetMicSen2WM8974)
+    SysTimerDelay                            0x00003eb9   Thumb Code    42  delay.o(i.SysTimerDelay)
+    SystemAdcInit                            0x00003ee9   Thumb Code   196  system_adc.o(i.SystemAdcInit)
+    SystemClockInit                          0x00003fc1   Thumb Code    86  main.o(i.SystemClockInit)
+    SystemConnectPolling                     0x00004025   Thumb Code   258  main.o(i.SystemConnectPolling)
+    SystemCoreClockUpdate                    0x00004139   Thumb Code    88  system_nuc123.o(i.SystemCoreClockUpdate)
+    SystemGlobalInit                         0x000041a9   Thumb Code   358  main.o(i.SystemGlobalInit)
+    SystemGlobalSet                          0x00004345   Thumb Code   156  main.o(i.SystemGlobalSet)
+    SystemInit                               0x000043fd   Thumb Code     2  system_nuc123.o(i.SystemInit)
+    SystemPowerDown                          0x00004401   Thumb Code    56  main.o(i.SystemPowerDown)
+    SystemReadAdcPolling                     0x00004445   Thumb Code   608  system_adc.o(i.SystemReadAdcPolling)
+    SystemTimer0Init                         0x00004701   Thumb Code   106  system_timer.o(i.SystemTimer0Init)
+    TMR0_IRQHandler                          0x00004781   Thumb Code    76  system_timer.o(i.TMR0_IRQHandler)
+    U32_Change_U8_4                          0x000047e5   Thumb Code    20  strconv.o(i.U32_Change_U8_4)
+    U8_4_Change_U32                          0x000047f9   Thumb Code    26  strconv.o(i.U8_4_Change_U32)
+    UART1_IRQHandler                         0x00004815   Thumb Code   210  wifi_core.o(i.UART1_IRQHandler)
+    UART_EnableInt                           0x000048f5   Thumb Code    34  uart.o(i.UART_EnableInt)
+    UART_Open                                0x0000491d   Thumb Code   166  uart.o(i.UART_Open)
+    USBD_CtrlIn                              0x000049d5   Thumb Code   202  usbd.o(i.USBD_CtrlIn)
+    USBD_CtrlOut                             0x00004ac5   Thumb Code    76  usbd.o(i.USBD_CtrlOut)
+    USBD_GetDescriptor                       0x00004b29   Thumb Code   390  usbd.o(i.USBD_GetDescriptor)
+    USBD_GetSetupPacket                      0x00004cbd   Thumb Code    16  usbd.o(i.USBD_GetSetupPacket)
+    USBD_IRQHandler                          0x00004cd1   Thumb Code   350  hid_transfer.o(i.USBD_IRQHandler)
+    USBD_Open                                0x00004e65   Thumb Code    52  usbd.o(i.USBD_Open)
+    USBD_PrepareCtrlIn                       0x00004ead   Thumb Code   114  usbd.o(i.USBD_PrepareCtrlIn)
+    USBD_PrepareCtrlOut                      0x00004f35   Thumb Code    24  usbd.o(i.USBD_PrepareCtrlOut)
+    USBD_ProcessSetupPacket                  0x00004f61   Thumb Code   102  usbd.o(i.USBD_ProcessSetupPacket)
+    USBD_StandardRequest                     0x00005015   Thumb Code   778  usbd.o(i.USBD_StandardRequest)
+    USBD_Start                               0x00005359   Thumb Code    86  usbd.o(i.USBD_Start)
+    USBD_SwReset                             0x000053c1   Thumb Code    84  usbd.o(i.USBD_SwReset)
+    UsbRecvPolling                           0x00005435   Thumb Code   206  hid_transfer.o(i.UsbRecvPolling)
+    UsbStringCompare                         0x0000553d   Thumb Code   116  hid_transfer.o(i.UsbStringCompare)
+    VoiceModeNoSignalResetTimer              0x000055b1   Thumb Code    10  system_adc.o(i.VoiceModeNoSignalResetTimer)
+    WifiCoreCommandSend                      0x00005611   Thumb Code    68  wifi_core.o(i.WifiCoreCommandSend)
+    WifiCoreRecvPolling                      0x00005655   Thumb Code   586  wifi_core.o(i.WifiCoreRecvPolling)
+    WifiCoreUSARTInit                        0x000058d5   Thumb Code   160  wifi_core.o(i.WifiCoreUSARTInit)
+    WifiCoreWriteByte                        0x00005989   Thumb Code    44  wifi_core.o(i.WifiCoreWriteByte)
+    Wm8974RegisterInit                       0x000059b9   Thumb Code   240  wm8974.o(i.Wm8974RegisterInit)
+    Wm8974SetEQValue                         0x00005aad   Thumb Code    26  wm8974.o(i.Wm8974SetEQValue)
+    Wm8974SetFilter                          0x00005acd   Thumb Code    36  wm8974.o(i.Wm8974SetFilter)
+    Wm8974SetInpgaHexVolume                  0x00005af5   Thumb Code    16  wm8974.o(i.Wm8974SetInpgaHexVolume)
+    Wm8974SetMonoVolCtrl                     0x00005b09   Thumb Code    32  wm8974.o(i.Wm8974SetMonoVolCtrl)
+    Wm8974SetSpkVolCtrl                      0x00005b2d   Thumb Code    32  wm8974.o(i.Wm8974SetSpkVolCtrl)
+    Wm8974SpecialParmInit                    0x00005b51   Thumb Code    44  main.o(i.Wm8974SpecialParmInit)
+    __0printf$8                              0x00005b81   Thumb Code    24  printf8.o(i.__0printf$8)
+    __1printf$8                              0x00005b81   Thumb Code     0  printf8.o(i.__0printf$8)
+    __2printf                                0x00005b81   Thumb Code     0  printf8.o(i.__0printf$8)
+    __0sprintf$8                             0x00005ba1   Thumb Code    36  printf8.o(i.__0sprintf$8)
+    __1sprintf$8                             0x00005ba1   Thumb Code     0  printf8.o(i.__0sprintf$8)
+    __2sprintf                               0x00005ba1   Thumb Code     0  printf8.o(i.__0sprintf$8)
+    __ARM_common_switch8                     0x00005bc9   Thumb Code    28  main.o(i.__ARM_common_switch8)
+    __scatterload_copy                       0x00005be5   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00005bf3   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00005bf5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    delay_ms                                 0x00006083   Thumb Code    22  delay.o(i.delay_ms)
+    delay_us                                 0x00006099   Thumb Code    12  delay.o(i.delay_us)
+    fputc                                    0x000060a5   Thumb Code    16  retarget.o(i.fputc)
+    main                                     0x00006195   Thumb Code   130  main.o(i.main)
+    HID_DeviceReportDescriptor               0x000062e0   Data          27  descriptors.o(.constdata)
+    gu8DeviceDescriptor                      0x000062fb   Data          18  descriptors.o(.constdata)
+    gu8ConfigDescriptor                      0x0000630d   Data          41  descriptors.o(.constdata)
+    gu8StringLang                            0x00006336   Data           4  descriptors.o(.constdata)
+    gu8VendorStringDesc                      0x0000633a   Data          16  descriptors.o(.constdata)
+    gu8ProductStringDesc                     0x0000634a   Data          26  descriptors.o(.constdata)
+    gu8StringSerial                          0x00006364   Data          26  descriptors.o(.constdata)
+    gu32UsbHidReportLen                      0x00006380   Data           8  descriptors.o(.constdata)
+    gu32ConfigHidDescIdx                     0x00006388   Data           8  descriptors.o(.constdata)
+    gsInfo                                   0x00006390   Data          24  descriptors.o(.constdata)
+    sucess_string                            0x000063a8   Data          64  hid_transfer.o(.constdata)
+    fail_string                              0x000063e8   Data          64  hid_transfer.o(.constdata)
+    image_startup                            0x00006a46   Data        9216  display.o(.constdata)
+    image_bat_value                          0x00008e46   Data         180  display.o(.constdata)
+    image_rssi_value                         0x00008efa   Data         180  display.o(.constdata)
+    image_bat_charge                         0x00008fae   Data          20  display.o(.constdata)
+    image_mic_open                           0x00008fc2   Data         256  display.o(.constdata)
+    image_mic_close                          0x000090c2   Data         256  display.o(.constdata)
+    image_mic_applying                       0x000091c2   Data         256  display.o(.constdata)
+    image_mic_waiting                        0x000092c2   Data         256  display.o(.constdata)
+    image_spk_time                           0x000093c2   Data         256  display.o(.constdata)
+    image_rem_time                           0x000094c2   Data         256  display.o(.constdata)
+    image_total_sign                         0x000095c2   Data         192  display.o(.constdata)
+    image_have_signed                        0x00009682   Data         192  display.o(.constdata)
+    image_sign_banned                        0x00009742   Data         256  display.o(.constdata)
+    image_voting                             0x00009842   Data         256  display.o(.constdata)
+    image_ap_lose                            0x00009942   Data         256  display.o(.constdata)
+    image_host_lose                          0x00009a42   Data         256  display.o(.constdata)
+    image_core_uart_error                    0x00009b42   Data         256  display.o(.constdata)
+    image_ssid_set_ok                        0x00009c42   Data         256  display.o(.constdata)
+    image_please_crack                       0x00009d42   Data         256  display.o(.constdata)
+    image_crack_sucess                       0x00009e42   Data         256  display.o(.constdata)
+    image_mic_full                           0x00009f42   Data         256  display.o(.constdata)
+    image_fire_warning                       0x0000a042   Data         256  display.o(.constdata)
+    image_id_repeat                          0x0000a142   Data         256  display.o(.constdata)
+    image_bat_too_low                        0x0000a242   Data         256  display.o(.constdata)
+    image_rssi_too_low                       0x0000a342   Data         256  display.o(.constdata)
+    image_local_id                           0x0000a442   Data         208  display.o(.constdata)
+    image_current_id                         0x0000a512   Data         208  display.o(.constdata)
+    image_ver                                0x0000a5e2   Data          80  display.o(.constdata)
+    image_home                               0x0000a632   Data         256  display.o(.constdata)
+    image_go_to_door                         0x0000a732   Data         512  display.o(.constdata)
+    image_go_to_console                      0x0000a932   Data         512  display.o(.constdata)
+    Region$$Table$$Base                      0x0000ab70   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0000ab90   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_nuc123.o(.data)
+    CyclesPerUs                              0x20000004   Data           4  system_nuc123.o(.data)
+    PllClock                                 0x20000008   Data           4  system_nuc123.o(.data)
+    gau32ClkSrcTbl                           0x2000000c   Data          32  system_nuc123.o(.data)
+    setid                                    0x2000002c   Data           8  main.o(.data)
+    sign                                     0x20000034   Data           6  main.o(.data)
+    vote                                     0x2000003a   Data           3  main.o(.data)
+    DataFlashWriteNumber                     0x20000054   Data           2  dataflash.o(.data)
+    DataFlashReadNumber                      0x20000056   Data           2  dataflash.o(.data)
+    timer0_delay_10ms_count                  0x2000005e   Data           2  system_timer.o(.data)
+    timer0_delay_1ms_count                   0x20000060   Data           2  system_timer.o(.data)
+    timer0_delay_1s_count                    0x20000062   Data           2  system_timer.o(.data)
+    timer0_delay_1s_already                  0x20000064   Data           1  system_timer.o(.data)
+    timer0_10ms_flag                         0x20000066   Data           2  system_timer.o(.data)
+    timer0_1s_flag                           0x20000068   Data           2  system_timer.o(.data)
+    gpu8UsbString                            0x20000080   Data          16  descriptors.o(.data)
+    gpu8UsbHidReport                         0x20000090   Data           8  descriptors.o(.data)
+    popup                                    0x20000098   Data           4  display.o(.data)
+    __stdout                                 0x200000a0   Data           4  retarget.o(.data)
+    __stdin                                  0x200000a4   Data           4  retarget.o(.data)
+    g_usbd_SetupPacket                       0x200000a8   Data           8  usbd.o(.data)
+    g_usbd_RemoteWakeupEn                    0x200000b0   Data           1  usbd.o(.data)
+    g_usbd_sInfo                             0x200000d8   Data           4  usbd.o(.data)
+    g_usbd_pfnVendorRequest                  0x200000dc   Data           4  usbd.o(.data)
+    g_usbd_pfnClassRequest                   0x200000e0   Data           4  usbd.o(.data)
+    g_usbd_pfnSetInterface                   0x200000e4   Data           4  usbd.o(.data)
+    g_usbd_pfnSetConfigCallback              0x200000e8   Data           4  usbd.o(.data)
+    g_u32EpStallLock                         0x200000ec   Data           4  usbd.o(.data)
+    system_save_data                         0x200000f4   Data          52  main.o(.bss)
+    info                                     0x20000128   Data          68  main.o(.bss)
+    wifi                                     0x2000016c   Data          45  main.o(.bss)
+    mic                                      0x200001ae   Data          28  audio_control.o(.bss)
+    usb_recv                                 0x200001ca   Data         514  hid_transfer.o(.bss)
+    wifi_core_recv                           0x200003cc   Data         820  wifi_core.o(.bss)
+    oled                                     0x20000700   Data        1036  oled_dma.o(.bss)
+    __initial_sp                             0x20000f10   Data           0  startup_nuc123.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000f1
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x0000ac84, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000ab90, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO          113    RESET               startup_nuc123.o
+    0x000000c0   0x000000c0   0x00000000   Code   RO         2094  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000c0   0x000000c0   0x00000004   Code   RO         2384    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c4   0x000000c4   0x00000004   Code   RO         2387    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO         2389    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c8   0x000000c8   0x00000000   Code   RO         2391    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c8   0x000000c8   0x00000008   Code   RO         2392    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO         2394    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000d0   0x000000d0   0x00000000   Code   RO         2396    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000d0   0x000000d0   0x00000004   Code   RO         2385    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d4   0x000000d4   0x0000001c   Code   RO         1531    .emb_text           retarget.o
+    0x000000f0   0x000000f0   0x0000004c   Code   RO          114  * .text               startup_nuc123.o
+    0x0000013c   0x0000013c   0x0000002c   Code   RO         2095    .text               mc_p.l(uidiv.o)
+    0x00000168   0x00000168   0x00000028   Code   RO         2097    .text               mc_p.l(idiv.o)
+    0x00000190   0x00000190   0x00000024   Code   RO         2099    .text               mc_p.l(memcpya.o)
+    0x000001b4   0x000001b4   0x00000024   Code   RO         2101    .text               mc_p.l(memseta.o)
+    0x000001d8   0x000001d8   0x00000060   Code   RO         2398    .text               mc_p.l(uldiv.o)
+    0x00000238   0x00000238   0x00000022   Code   RO         2400    .text               mc_p.l(llushr.o)
+    0x0000025a   0x0000025a   0x00000002   PAD
+    0x0000025c   0x0000025c   0x00000024   Code   RO         2423    .text               mc_p.l(init.o)
+    0x00000280   0x00000280   0x00000020   Code   RO         2425    .text               mc_p.l(llshl.o)
+    0x000002a0   0x000002a0   0x00000058   Code   RO          627    i.ADC_IRQHandler    system_adc.o
+    0x000002f8   0x000002f8   0x0000004e   Code   RO          628    i.AdcBubbleSort     system_adc.o
+    0x00000346   0x00000346   0x00000002   PAD
+    0x00000348   0x00000348   0x00000040   Code   RO          629    i.AdcNopRuning      system_adc.o
+    0x00000388   0x00000388   0x00000030   Code   RO          630    i.Battery_conver    system_adc.o
+    0x000003b8   0x000003b8   0x00000024   Code   RO         1359    i.CLK_EnableModuleClock  clk.o
+    0x000003dc   0x000003dc   0x00000184   Code   RO         1360    i.CLK_EnablePLL     clk.o
+    0x00000560   0x00000560   0x00000010   Code   RO         1362    i.CLK_EnableXtalRC  clk.o
+    0x00000570   0x00000570   0x00000010   Code   RO         1364    i.CLK_GetHCLKFreq   clk.o
+    0x00000580   0x00000580   0x00000080   Code   RO            3    i.CLK_GetPLLClockFreq  system_nuc123.o
+    0x00000600   0x00000600   0x00000080   Code   RO         1367    i.CLK_GetPLLClockFreq  clk.o
+    0x00000680   0x00000680   0x00000080   Code   RO         1695    i.CLK_GetPLLClockFreq  uart.o
+    0x00000700   0x00000700   0x00000080   Code   RO         1925    i.CLK_GetPLLClockFreq  spi.o
+    0x00000780   0x00000780   0x0000009c   Code   RO         1370    i.CLK_SetCoreClock  clk.o
+    0x0000081c   0x0000081c   0x00000060   Code   RO         1371    i.CLK_SetHCLK       clk.o
+    0x0000087c   0x0000087c   0x000000b0   Code   RO         1372    i.CLK_SetModuleClock  clk.o
+    0x0000092c   0x0000092c   0x00000014   Code   RO         1373    i.CLK_SetSysTickClockSrc  clk.o
+    0x00000940   0x00000940   0x00000028   Code   RO         1374    i.CLK_WaitClockReady  clk.o
+    0x00000968   0x00000968   0x00000098   Code   RO          120    i.ClearMICFullstate  main.o
+    0x00000a00   0x00000a00   0x00000064   Code   RO          559    i.DataFlashClean_NS  dataflash.o
+    0x00000a64   0x00000a64   0x000000dc   Code   RO          560    i.DataFlashFindDataNumber_NS  dataflash.o
+    0x00000b40   0x00000b40   0x00000078   Code   RO          561    i.DataFlashInit     dataflash.o
+    0x00000bb8   0x00000bb8   0x00000030   Code   RO          562    i.DataFlashRead_NS  dataflash.o
+    0x00000be8   0x00000be8   0x000000c0   Code   RO          563    i.DataFlashSave     dataflash.o
+    0x00000ca8   0x00000ca8   0x0000006c   Code   RO         1248    i.DisplayAPLose     display.o
+    0x00000d14   0x00000d14   0x0000006c   Code   RO         1249    i.DisplayHostLose   display.o
+    0x00000d80   0x00000d80   0x0000015c   Code   RO         1250    i.DisplayMicStartTimeStatement  display.o
+    0x00000edc   0x00000edc   0x000000c0   Code   RO         1251    i.DisplayPopupTimeoutPolling  display.o
+    0x00000f9c   0x00000f9c   0x00000070   Code   RO         1252    i.DisplayRestoreIDRepeatMode  display.o
+    0x0000100c   0x0000100c   0x0000029c   Code   RO         1253    i.DisplayRestoreMeetingMode  display.o
+    0x000012a8   0x000012a8   0x000000e0   Code   RO         1254    i.DisplayRestoreSetIDMode  display.o
+    0x00001388   0x00001388   0x00000164   Code   RO         1255    i.DisplayRestoreSignMode  display.o
+    0x000014ec   0x000014ec   0x0000009c   Code   RO         1256    i.DisplayRestoreVoteMode  display.o
+    0x00001588   0x00001588   0x00000034   Code   RO         1257    i.DisplaySetPopup   display.o
+    0x000015bc   0x000015bc   0x00000050   Code   RO         1258    i.DisplayStartupFlash  display.o
+    0x0000160c   0x0000160c   0x000000b4   Code   RO         1259    i.DisplayStatusInfo  display.o
+    0x000016c0   0x000016c0   0x0000007c   Code   RO         1260    i.DisplaySystemInfo  display.o
+    0x0000173c   0x0000173c   0x00000048   Code   RO         1261    i.DisplayUartError  display.o
+    0x00001784   0x00001784   0x00000044   Code   RO          887    i.EP3_Handler       hid_transfer.o
+    0x000017c8   0x000017c8   0x00000034   Code   RO          564    i.FMC_Read          dataflash.o
+    0x000017fc   0x000017fc   0x00000034   Code   RO          565    i.FMC_ReadUID       dataflash.o
+    0x00001830   0x00001830   0x00000198   Code   RO          121    i.GpioNormalInit    main.o
+    0x000019c8   0x000019c8   0x00000084   Code   RO          888    i.HID_ClassRequest  hid_transfer.o
+    0x00001a4c   0x00001a4c   0x000000a0   Code   RO          889    i.HID_Init          hid_transfer.o
+    0x00001aec   0x00001aec   0x0000002c   Code   RO         1533    i.Hard_Fault_Handler  retarget.o
+    0x00001b18   0x00001b18   0x00000070   Code   RO          787    i.HardwordCloseMic  audio_control.o
+    0x00001b88   0x00001b88   0x0000003c   Code   RO          788    i.HardwordOpenMic   audio_control.o
+    0x00001bc4   0x00001bc4   0x00000050   Code   RO         1031    i.HostCommandSend   wifi_core.o
+    0x00001c14   0x00001c14   0x00000040   Code   RO         1032    i.HostCommandSendEnterSystem  wifi_core.o
+    0x00001c54   0x00001c54   0x00000044   Code   RO          122    i.HostDisconnectDo  main.o
+    0x00001c98   0x00001c98   0x00000e84   Code   RO         1033    i.HostRecvCheck     wifi_core.o
+    0x00002b1c   0x00002b1c   0x0000004c   Code   RO          358    i.IIC_BUS_Write_7Bitadd_9Bitdata  i2c_simulate.o
+    0x00002b68   0x00002b68   0x0000005a   Code   RO          364    i.IIC_Send_Byte     i2c_simulate.o
+    0x00002bc2   0x00002bc2   0x00000030   Code   RO          365    i.IIC_Start         i2c_simulate.o
+    0x00002bf2   0x00002bf2   0x00000030   Code   RO          366    i.IIC_Stop          i2c_simulate.o
+    0x00002c22   0x00002c22   0x00000048   Code   RO          367    i.IIC_Wait_Ack      i2c_simulate.o
+    0x00002c6a   0x00002c6a   0x00000002   PAD
+    0x00002c6c   0x00002c6c   0x000001d8   Code   RO          832    i.KeyInputPolling   key.o
+    0x00002e44   0x00002e44   0x00000100   Code   RO          123    i.LedFlashPolling   main.o
+    0x00002f44   0x00002f44   0x00000064   Code   RO          124    i.LedStaticControl  main.o
+    0x00002fa8   0x00002fa8   0x0000001a   Code   RO          731    i.M_Pow_N           strconv.o
+    0x00002fc2   0x00002fc2   0x00000002   PAD
+    0x00002fc4   0x00002fc4   0x00000240   Code   RO          125    i.MicStatementPolling  main.o
+    0x00003204   0x00003204   0x00000014   Code   RO         1697    i.NVIC_EnableIRQ    uart.o
+    0x00003218   0x00003218   0x00000078   Code   RO          690    i.NVIC_SetPriority  system_timer.o
+    0x00003290   0x00003290   0x00000078   Code   RO         1034    i.NVIC_SetPriority  wifi_core.o
+    0x00003308   0x00003308   0x0000002a   Code   RO         1104    i.OLEDCPUClear      oled_dma.o
+    0x00003332   0x00003332   0x00000002   PAD
+    0x00003334   0x00003334   0x00000040   Code   RO         1105    i.OLEDCPUSendCmd    oled_dma.o
+    0x00003374   0x00003374   0x00000044   Code   RO         1106    i.OLEDCPUSendDat    oled_dma.o
+    0x000033b8   0x000033b8   0x0000000a   Code   RO         1107    i.OLEDCPUSendOff    oled_dma.o
+    0x000033c2   0x000033c2   0x0000001a   Code   RO         1109    i.OLEDCPUSetCol     oled_dma.o
+    0x000033dc   0x000033dc   0x0000001a   Code   RO         1110    i.OLEDCPUSetPage    oled_dma.o
+    0x000033f6   0x000033f6   0x00000002   PAD
+    0x000033f8   0x000033f8   0x00000030   Code   RO         1111    i.OLEDDMAClearPic   oled_dma.o
+    0x00003428   0x00003428   0x00000074   Code   RO         1112    i.OLEDDMAFill       oled_dma.o
+    0x0000349c   0x0000349c   0x00000054   Code   RO         1113    i.OLEDDMAPolling    oled_dma.o
+    0x000034f0   0x000034f0   0x0000008c   Code   RO         1115    i.OLEDDMAShowChar   oled_dma.o
+    0x0000357c   0x0000357c   0x00000078   Code   RO         1117    i.OLEDDMAShowNumFill  oled_dma.o
+    0x000035f4   0x000035f4   0x00000088   Code   RO         1118    i.OLEDDMAShowPic    oled_dma.o
+    0x0000367c   0x0000367c   0x0000003c   Code   RO         1119    i.OLEDDMAShowStr    oled_dma.o
+    0x000036b8   0x000036b8   0x0000002c   Code   RO         1120    i.OLEDDMAUpdate     oled_dma.o
+    0x000036e4   0x000036e4   0x0000004c   Code   RO         1121    i.OLEDDMAUpdateImmediately  oled_dma.o
+    0x00003730   0x00003730   0x00000060   Code   RO         1122    i.OLEDNegation      oled_dma.o
+    0x00003790   0x00003790   0x00000098   Code   RO         1123    i.OLEDRegInit       oled_dma.o
+    0x00003828   0x00003828   0x00000138   Code   RO         1124    i.OLEDSpiInit       oled_dma.o
+    0x00003960   0x00003960   0x00000014   Code   RO         2036    i.PDMA_EnableInt    pdma.o
+    0x00003974   0x00003974   0x0000000c   Code   RO         1125    i.PDMA_IRQHandler   oled_dma.o
+    0x00003980   0x00003980   0x00000014   Code   RO         2037    i.PDMA_Open         pdma.o
+    0x00003994   0x00003994   0x00000024   Code   RO         2038    i.PDMA_SetTransferAddr  pdma.o
+    0x000039b8   0x000039b8   0x00000048   Code   RO         2039    i.PDMA_SetTransferCnt  pdma.o
+    0x00003a00   0x00003a00   0x0000021c   Code   RO         2040    i.PDMA_SetTransferMode  pdma.o
+    0x00003c1c   0x00003c1c   0x00000018   Code   RO         2041    i.PDMA_Trigger      pdma.o
+    0x00003c34   0x00003c34   0x00000016   Code   RO         1933    i.SPI_EnableAutoSS  spi.o
+    0x00003c4a   0x00003c4a   0x00000002   PAD
+    0x00003c4c   0x00003c4c   0x000001c8   Code   RO         1939    i.SPI_Open          spi.o
+    0x00003e14   0x00003e14   0x00000030   Code   RO         1630    i.SYS_ResetModule   sys.o
+    0x00003e44   0x00003e44   0x00000020   Code   RO          566    i.SYS_UnlockReg     dataflash.o
+    0x00003e64   0x00003e64   0x0000000c   Code   RO         1535    i.SendChar          retarget.o
+    0x00003e70   0x00003e70   0x00000034   Code   RO         1536    i.SendChar_ToUART   retarget.o
+    0x00003ea4   0x00003ea4   0x00000014   Code   RO          790    i.SetMicSen2WM8974  audio_control.o
+    0x00003eb8   0x00003eb8   0x00000030   Code   RO          301    i.SysTimerDelay     delay.o
+    0x00003ee8   0x00003ee8   0x000000d8   Code   RO          631    i.SystemAdcInit     system_adc.o
+    0x00003fc0   0x00003fc0   0x00000064   Code   RO          126    i.SystemClockInit   main.o
+    0x00004024   0x00004024   0x00000114   Code   RO          127    i.SystemConnectPolling  main.o
+    0x00004138   0x00004138   0x00000070   Code   RO            4    i.SystemCoreClockUpdate  system_nuc123.o
+    0x000041a8   0x000041a8   0x0000019c   Code   RO          128    i.SystemGlobalInit  main.o
+    0x00004344   0x00004344   0x000000b8   Code   RO          129    i.SystemGlobalSet   main.o
+    0x000043fc   0x000043fc   0x00000002   Code   RO            5    i.SystemInit        system_nuc123.o
+    0x000043fe   0x000043fe   0x00000002   PAD
+    0x00004400   0x00004400   0x00000044   Code   RO          130    i.SystemPowerDown   main.o
+    0x00004444   0x00004444   0x000002bc   Code   RO          632    i.SystemReadAdcPolling  system_adc.o
+    0x00004700   0x00004700   0x00000080   Code   RO          691    i.SystemTimer0Init  system_timer.o
+    0x00004780   0x00004780   0x00000064   Code   RO          692    i.TMR0_IRQHandler   system_timer.o
+    0x000047e4   0x000047e4   0x00000014   Code   RO          734    i.U32_Change_U8_4   strconv.o
+    0x000047f8   0x000047f8   0x0000001a   Code   RO          735    i.U8_4_Change_U32   strconv.o
+    0x00004812   0x00004812   0x00000002   PAD
+    0x00004814   0x00004814   0x000000e0   Code   RO         1035    i.UART1_IRQHandler  wifi_core.o
+    0x000048f4   0x000048f4   0x00000028   Code   RO         1703    i.UART_EnableInt    uart.o
+    0x0000491c   0x0000491c   0x000000b8   Code   RO         1704    i.UART_Open         uart.o
+    0x000049d4   0x000049d4   0x000000f0   Code   RO         1809    i.USBD_CtrlIn       usbd.o
+    0x00004ac4   0x00004ac4   0x00000064   Code   RO         1810    i.USBD_CtrlOut      usbd.o
+    0x00004b28   0x00004b28   0x00000194   Code   RO         1811    i.USBD_GetDescriptor  usbd.o
+    0x00004cbc   0x00004cbc   0x00000014   Code   RO         1812    i.USBD_GetSetupPacket  usbd.o
+    0x00004cd0   0x00004cd0   0x00000168   Code   RO          890    i.USBD_IRQHandler   hid_transfer.o
+    0x00004e38   0x00004e38   0x00000016   Code   RO          891    i.USBD_MemCopy      hid_transfer.o
+    0x00004e4e   0x00004e4e   0x00000016   Code   RO         1814    i.USBD_MemCopy      usbd.o
+    0x00004e64   0x00004e64   0x00000048   Code   RO         1815    i.USBD_Open         usbd.o
+    0x00004eac   0x00004eac   0x00000088   Code   RO         1816    i.USBD_PrepareCtrlIn  usbd.o
+    0x00004f34   0x00004f34   0x0000002c   Code   RO         1817    i.USBD_PrepareCtrlOut  usbd.o
+    0x00004f60   0x00004f60   0x0000007c   Code   RO         1818    i.USBD_ProcessSetupPacket  usbd.o
+    0x00004fdc   0x00004fdc   0x00000038   Code   RO          892    i.USBD_SetStall     hid_transfer.o
+    0x00005014   0x00005014   0x00000344   Code   RO         1821    i.USBD_StandardRequest  usbd.o
+    0x00005358   0x00005358   0x00000068   Code   RO         1822    i.USBD_Start        usbd.o
+    0x000053c0   0x000053c0   0x00000074   Code   RO         1823    i.USBD_SwReset      usbd.o
+    0x00005434   0x00005434   0x00000108   Code   RO          893    i.UsbRecvPolling    hid_transfer.o
+    0x0000553c   0x0000553c   0x00000074   Code   RO          895    i.UsbStringCompare  hid_transfer.o
+    0x000055b0   0x000055b0   0x00000010   Code   RO          633    i.VoiceModeNoSignalResetTimer  system_adc.o
+    0x000055c0   0x000055c0   0x0000000c   Code   RO          463    i.WM8974_SCK        wm8974.o
+    0x000055cc   0x000055cc   0x0000002c   Code   RO          464    i.WM8974_SDA_Mode   wm8974.o
+    0x000055f8   0x000055f8   0x0000000c   Code   RO          465    i.WM8974_SDI        wm8974.o
+    0x00005604   0x00005604   0x0000000c   Code   RO          466    i.WM8974_SDO        wm8974.o
+    0x00005610   0x00005610   0x00000044   Code   RO         1036    i.WifiCoreCommandSend  wifi_core.o
+    0x00005654   0x00005654   0x00000280   Code   RO         1037    i.WifiCoreRecvPolling  wifi_core.o
+    0x000058d4   0x000058d4   0x000000b4   Code   RO         1038    i.WifiCoreUSARTInit  wifi_core.o
+    0x00005988   0x00005988   0x00000030   Code   RO         1039    i.WifiCoreWriteByte  wifi_core.o
+    0x000059b8   0x000059b8   0x000000f4   Code   RO          467    i.Wm8974RegisterInit  wm8974.o
+    0x00005aac   0x00005aac   0x00000020   Code   RO          471    i.Wm8974SetEQValue  wm8974.o
+    0x00005acc   0x00005acc   0x00000028   Code   RO          472    i.Wm8974SetFilter   wm8974.o
+    0x00005af4   0x00005af4   0x00000014   Code   RO          474    i.Wm8974SetInpgaHexVolume  wm8974.o
+    0x00005b08   0x00005b08   0x00000024   Code   RO          475    i.Wm8974SetMonoVolCtrl  wm8974.o
+    0x00005b2c   0x00005b2c   0x00000024   Code   RO          476    i.Wm8974SetSpkVolCtrl  wm8974.o
+    0x00005b50   0x00005b50   0x00000030   Code   RO          131    i.Wm8974SpecialParmInit  main.o
+    0x00005b80   0x00005b80   0x00000020   Code   RO         2312    i.__0printf$8       mc_p.l(printf8.o)
+    0x00005ba0   0x00005ba0   0x00000028   Code   RO         2314    i.__0sprintf$8      mc_p.l(printf8.o)
+    0x00005bc8   0x00005bc8   0x0000001c   Code   RO          211    i.__ARM_common_switch8  main.o
+    0x00005be4   0x00005be4   0x0000000e   Code   RO         2438    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x00005bf2   0x00005bf2   0x00000002   Code   RO         2439    i.__scatterload_null  mc_p.l(handlers.o)
+    0x00005bf4   0x00005bf4   0x0000000e   Code   RO         2440    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x00005c02   0x00005c02   0x00000002   PAD
+    0x00005c04   0x00005c04   0x00000428   Code   RO         2319    i._printf_core      mc_p.l(printf8.o)
+    0x0000602c   0x0000602c   0x00000020   Code   RO         2320    i._printf_post_padding  mc_p.l(printf8.o)
+    0x0000604c   0x0000604c   0x0000002c   Code   RO         2321    i._printf_pre_padding  mc_p.l(printf8.o)
+    0x00006078   0x00006078   0x0000000a   Code   RO         2323    i._sputc            mc_p.l(printf8.o)
+    0x00006082   0x00006082   0x00000016   Code   RO          302    i.delay_ms          delay.o
+    0x00006098   0x00006098   0x0000000c   Code   RO          303    i.delay_us          delay.o
+    0x000060a4   0x000060a4   0x00000010   Code   RO         1540    i.fputc             retarget.o
+    0x000060b4   0x000060b4   0x000000e0   Code   RO          834    i.keyInputGet       key.o
+    0x00006194   0x00006194   0x00000090   Code   RO          132    i.main              main.o
+    0x00006224   0x00006224   0x000000a8   Code   RO         1542    i.stackDump         retarget.o
+    0x000062cc   0x000062cc   0x00000014   Data   RO          635    .constdata          system_adc.o
+    0x000062e0   0x000062e0   0x000000c8   Data   RO          865    .constdata          descriptors.o
+    0x000063a8   0x000063a8   0x000000a4   Data   RO          897    .constdata          hid_transfer.o
+    0x0000644c   0x0000644c   0x0000000a   Data   RO         1041    .constdata          wifi_core.o
+    0x00006456   0x00006456   0x000005f0   Data   RO         1127    .constdata          oled_dma.o
+    0x00006a46   0x00006a46   0x000040ec   Data   RO         1262    .constdata          display.o
+    0x0000ab32   0x0000ab32   0x00000002   PAD
+    0x0000ab34   0x0000ab34   0x0000000c   Data   RO         1375    .constdata          clk.o
+    0x0000ab40   0x0000ab40   0x00000030   Data   RO         1711    .constdata          uart.o
+    0x0000ab70   0x0000ab70   0x00000020   Data   RO         2436    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x0000ab90, Size: 0x000000f4, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x0000ab90   0x0000002c   Data   RW            6    .data               system_nuc123.o
+    0x2000002c   0x0000abbc   0x00000014   Data   RW          134    .data               main.o
+    0x20000040   0x0000abd0   0x00000014   Data   RW          477    .data               wm8974.o
+    0x20000054   0x0000abe4   0x00000004   Data   RW          567    .data               dataflash.o
+    0x20000058   0x0000abe8   0x00000005   Data   RW          636    .data               system_adc.o
+    0x2000005d   0x0000abed   0x00000001   PAD
+    0x2000005e   0x0000abee   0x0000000c   Data   RW          693    .data               system_timer.o
+    0x2000006a   0x0000abfa   0x00000013   Data   RW          835    .data               key.o
+    0x2000007d   0x0000ac0d   0x00000003   PAD
+    0x20000080   0x0000ac10   0x00000018   Data   RW          866    .data               descriptors.o
+    0x20000098   0x0000ac28   0x00000008   Data   RW         1263    .data               display.o
+    0x200000a0   0x0000ac30   0x00000008   Data   RW         1543    .data               retarget.o
+    0x200000a8   0x0000ac38   0x00000049   Data   RW         1824    .data               usbd.o
+
+
+    Execution Region ER_ZI (Exec base: 0x200000f4, Load base: 0x0000ac84, Size: 0x00000e1c, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x200000f4        -       0x000000a5   Zero   RW          133    .bss                main.o
+    0x20000199   0x0000ac84   0x00000001   PAD
+    0x2000019a        -       0x00000014   Zero   RW          634    .bss                system_adc.o
+    0x200001ae        -       0x0000001c   Zero   RW          791    .bss                audio_control.o
+    0x200001ca        -       0x00000202   Zero   RW          896    .bss                hid_transfer.o
+    0x200003cc        -       0x00000334   Zero   RW         1040    .bss                wifi_core.o
+    0x20000700        -       0x0000040c   Zero   RW         1126    .bss                oled_dma.o
+    0x20000b0c   0x0000ac84   0x00000004   PAD
+    0x20000b10        -       0x00000400   Zero   RW          111    STACK               startup_nuc123.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       192         12          0          0         28       2970   audio_control.o
+      1072        120         12          0          0       7037   clk.o
+       816         76          0          4          0      38587   dataflash.o
+        82          6          0          0          0       6090   delay.o
+         0          0        200         24          0       6771   descriptors.o
+      2780        682      16620          8          0      17955   display.o
+      1178        124        164          0        514      11418   hid_transfer.o
+       334          0          0          0          0       3447   i2c_simulate.o
+       696         84          0         19          0       2290   key.o
+      2820        362          0         20        165     121759   main.o
+      1632        166       1520          0       1036      11952   oled_dma.o
+       712         60          0          0          0       4312   pdma.o
+       320        132          0          8          0       5216   retarget.o
+       606         30          0          0          0       3022   spi.o
+        76         32        192          0       1024        720   startup_nuc123.o
+        72          0          0          0          0       1974   strconv.o
+        48          0          0          0          0        522   sys.o
+      1210        140         20          5         20      11906   system_adc.o
+       242         40          0         44          0      98935   system_nuc123.o
+       348         56          0         12          0       8772   system_timer.o
+       372         46         48          0          0       9621   uart.o
+      2218        272          0         73          0      28272   usbd.o
+      5140        584         10          0        820      15495   wifi_core.o
+       488         46          0         20          0       5257   wm8974.o
+
+    ----------------------------------------------------------------------
+     23470       3070      18820        244       3612     424300   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        16          0          2          7          5          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        40          0          0          0          0         72   idiv.o
+        36          8          0          0          0         68   init.o
+        32          0          0          0          0         68   llshl.o
+        34          0          0          0          0         68   llushr.o
+        36          0          0          0          0         60   memcpya.o
+        36          0          0          0          0        100   memseta.o
+      1222         56          0          0          0        468   printf8.o
+        44          0          0          0          0         72   uidiv.o
+        96          0          0          0          0         84   uldiv.o
+
+    ----------------------------------------------------------------------
+      1630         72          0          0          0       1060   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1626         72          0          0          0       1060   mc_p.l
+
+    ----------------------------------------------------------------------
+      1630         72          0          0          0       1060   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     25100       3142      18820        244       3612     418420   Grand Totals
+     25100       3142      18820        244       3612     418420   ELF Image Totals
+     25100       3142      18820        244          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                43920 (  42.89kB)
+    Total RW  Size (RW Data + ZI Data)              3856 (   3.77kB)
+    Total ROM Size (Code + RO Data + RW Data)      44164 (  43.13kB)
+
+==============================================================================
+
